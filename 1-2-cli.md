@@ -231,7 +231,7 @@ man file-hierarchy
 Տեղադրեք `tree` ծրագիրը
 
 ```bash
-sudo yum install tree
+sudo yum -y install tree
 
 ```
 
