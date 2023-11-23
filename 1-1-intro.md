@@ -78,8 +78,12 @@
 <img src=https://github.com/trainart/linux1/blob/main/img/Linux-Essentials-2023-intro_36.jpg width=70% height=70% >
 <br><br>
 
-> Linux վիրտուալ մեքենա (VM) 
+> Տեսական - գաղափարային մաս
+> Linux համակարգը որպես վիրտուալ մեքենա (VM) 
 
 * **Oracle VM VirtualBox** միջավայրում միացրեք վիրտուալ մեքենաները
   * **CentOS 7.5** 
   * **RockyLinux8** 
+* մուտք գործեք
+  * student անունով
+  * 123456 գաղտնաբառով
