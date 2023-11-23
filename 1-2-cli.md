@@ -157,7 +157,7 @@ date +"%d-%m-%Y"
 
 <br><br>
 
-## File Management Commands
+## File Management
 
 > Ֆայլերի անվանումը
 * Windows
@@ -169,7 +169,54 @@ date +"%d-%m-%Y"
   * `/bin/ls`
 
 
-### Ծանոթացում ֆայլային համակարգի կառուցվածքին
+### Ծանոթացում Լինուքսի ֆայլային համակարգի կառուցվածքին
+
+
+* Տվյալները Լինուքսում պահպանվում են`
+  * կոշտ սկավառակի կամ այլ կրիչների վրա 
+  * Ֆայլերի տեսքով, որոնք ներկայացվում են օգտագործողին ծառաձև դիրեկտորիաների կառուցվածքով 
+
+* **Filesystem**/**Ֆայլային համակարգ**՝ որոշակի ստանդարտին համապատասխանող տվյալները սկավառակի/կրիչի վրա պահպանելու կառուցվածք
+  * Նպատակն է հեշտ հասանելի դարձնել տվյալները
+
+* Լինուքսը "հասկանում" է ֆայլային համակարգերի բազմաթիվ ստանդարտներ, օրինակ.
+    * ext2, ext3, ext4, xfs, zfs, jfs, btrfs
+    * FAT16, FAT32, NTFS, ISO9660, UDF
+
+
+* Դիրեկտորիաների կառուցվածքը 
+  * կազմում է հիերարխիկ ֆայլային համակարգ 
+  * Լինուքսի յուրահատկությունը՝ 
+    * Միասնական ծառ, ոչ թե  **C:**  **D:**  **E:** դիսկեր 
+
+![img.png](img/fs-tree1.png)
+
+![img.png](img/fs-tree2.png)
+
+![img.png](img/fs-tree3.png)
+
+### Linux Partition Mounting (հատվածնեչի կցում)
+
+* Partition հատվածները որպես առանձնացված տառերով դիսկեր ներկայացնելու փոխարեն, Լինուքսում կա 
+  * գլխավոր հատված՝ **root partition**
+  * մյուս հատվածները կցվում են (mount) գլխավորի որևէ կետին` դիրեկտորիային
+* Յուրաքանչյուր Partition հատվածը ունի որոշակի ստանդարտի առանձին ֆայլային համակարգ
+
+![img.png](img/partition-mount.png)
+
+
+ճանապարհը դեպի ՝report.doc՝ ֆայլը նշելու տաբերակներ.
+* Ցանկացած տեղից
+  * /home/its/ug1/ee51vn/report.doc
+* Եթե գտնվում ենք ՝ee51vn՝-ում
+  * ee51vn/report.doc
+  * ./ee51vn/report.doc
+  * ../ug1/ee51vn/report.doc
+
+* Եթե գտնվում ենք ՝scs/staff՝-ում
+  * ../../its/ug1/ee51vn/report.doc
+
+
 
 ```bash 
 ls /
@@ -184,7 +231,7 @@ man file-hierarchy
 Տեղադրեք `tree` ծրագիրը
 
 ```bash
-sudo apt install tree
+sudo yum install tree
 
 ```
 
@@ -364,6 +411,27 @@ LIST="/usr/bin/" ; ls -l $LIST
 
 <br><br>
 
+## File Permissions
+
+<img src=https://github.com/trainart/linux1/blob/main/img/permissions.png  width=70% height=70% >
+<br><br>
+<img src=https://github.com/trainart/linux1/blob/main/img/permissions2.png  width=70% height=70% >
+<br><br>
+<img src=https://github.com/trainart/linux1/blob/main/img/permissions3.png  width=70% height=70% >
+<br><br>
+<img src=https://github.com/trainart/linux1/blob/main/img/permissions4.png  width=70% height=70% >
+<br><br>
+<img src=https://github.com/trainart/linux1/blob/main/img/chmod.png  width=70% height=70% >
+<br><br>
+<img src=https://github.com/trainart/linux1/blob/main/img/mc.png  width=70% height=70% >
+<br><br>
+<img src=https://github.com/trainart/linux1/blob/main/img/umask.png  width=70% height=70% >
+<br><br>
+
+
+
+
+
 ## Access files
 
 There are several tool to view text files contents.
@@ -444,9 +512,14 @@ There are several tool to view text files contents.
 
 ## I/O Redirection
 
-<img src=https://github.com/arthur7373/shell/blob/main/shell-course/io-redir-1.jpg width=50% height=50% >
+
+<img src=https://github.com/trainart/linux1/blob/main/img/io-redir-1.jpg  width=70% height=70% >
 <br><br>
-<img src=https://github.com/arthur7373/shell/blob/main/shell-course/io-redir-2.jpg width=50% height=50% >
+<img src=https://github.com/trainart/linux1/blob/main/img/io-redir-2.jpg  width=70% height=70% >
+<br><br>
+
+
+
 
 > STDOUT - Standard output  		>     >> 
  
@@ -463,8 +536,8 @@ There are several tool to view text files contents.
 ## Pipes
 
 Pipeline - Մեկ հրամանի STDOUT-ը ուղարկել այլ հրամանի STDIN-ին
-
-<img src=https://github.com/arthur7373/shell/blob/main/shell-course/pipes-1.jpg width=50% height=50% >
+<img src=https://github.com/trainart/linux1/blob/main/img/pipes-1.jpg  width=70% height=70% >
+<br><br>
 
 > Օրինակ
 
