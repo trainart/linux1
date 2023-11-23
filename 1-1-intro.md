@@ -78,7 +78,7 @@
 <img src=https://github.com/trainart/linux1/blob/main/img/Linux-Essentials-2023-intro_36.jpg width=70% height=70% >
 <br><br>
 
-> Տեսական - գաղափարային մաս
+> Գործնական մաս
 > Linux համակարգը որպես վիրտուալ մեքենա (VM) 
 
 * **Oracle VM VirtualBox** միջավայրում միացրեք վիրտուալ մեքենաները
