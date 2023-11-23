@@ -3,6 +3,7 @@
 > Ներածական հարց թեմայի վերաբերյալ 
 * Որքանո՞վ եք ծանոթ Linux-ին
 
+> Տեսական - գաղափարային մաս
 
 <img src=https://github.com/trainart/linux1/blob/main/img/Linux-Essentials-2023-intro_01.jpg width=70% height=70% >
 <br><br>
