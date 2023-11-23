@@ -615,7 +615,7 @@ Even if any other editor will not be present or available to install Vi/Vim will
 
 There is also much rarely used **Visual** mode for highlight or select text for copying, deleting, etc 
 
-<img src=https://github.com/arthur7373/shell/blob/main/shell-course/vim-modes.jpg width=50% height=50% >
+<img src=https://github.com/trainart/linux1/blob/main/img/vim-modes.jpg width=70% height=70% >
 
 > REMEMBER ! 
 > If you get confused in which mode you are in just **press the `ESC` key a couple of times and start over** with what you were doing.
@@ -645,3 +645,10 @@ Create new file in `vi` editor
 * Press the `ESC` key for command mode
 * Type `:wq` to save and quit the file
 
+
+## su, sudo
+
+![img.png](img/su.png)
+<br><br>
+![img.png](img/sudo.png)
+<br><br>
