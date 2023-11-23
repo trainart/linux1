@@ -31,3 +31,44 @@
 <img src=https://github.com/trainart/linux1/blob/main/img/Linux-Essentials-2023-intro_15.jpg width=70% height=70% >
 <br><br>
 <img src=https://github.com/trainart/linux1/blob/main/img/Linux-Essentials-2023-intro_16.jpg width=70% height=70% >
+<br><br>
+<img src=https://github.com/trainart/linux1/blob/main/img/Linux-Essentials-2023-intro_17.jpg width=70% height=70% >
+<br><br>
+<img src=https://github.com/trainart/linux1/blob/main/img/Linux-Essentials-2023-intro_18.jpg width=70% height=70% >
+<br><br>
+<img src=https://github.com/trainart/linux1/blob/main/img/Linux-Essentials-2023-intro_19.jpg width=70% height=70% >
+<br><br>
+<img src=https://github.com/trainart/linux1/blob/main/img/Linux-Essentials-2023-intro_20.jpg width=70% height=70% >
+<br><br>
+<img src=https://github.com/trainart/linux1/blob/main/img/Linux-Essentials-2023-intro_21.jpg width=70% height=70% >
+<br><br>
+<img src=https://github.com/trainart/linux1/blob/main/img/Linux-Essentials-2023-intro_22.jpg width=70% height=70% >
+<br><br>
+<img src=https://github.com/trainart/linux1/blob/main/img/Linux-Essentials-2023-intro_23.jpg width=70% height=70% >
+<br><br>
+<img src=https://github.com/trainart/linux1/blob/main/img/Linux-Essentials-2023-intro_24.jpg width=70% height=70% >
+<br><br>
+<img src=https://github.com/trainart/linux1/blob/main/img/Linux-Essentials-2023-intro_25.jpg width=70% height=70% >
+<br><br>
+<img src=https://github.com/trainart/linux1/blob/main/img/Linux-Essentials-2023-intro_26.jpg width=70% height=70% >
+<br><br>
+<img src=https://github.com/trainart/linux1/blob/main/img/Linux-Essentials-2023-intro_27.jpg width=70% height=70% >
+<br><br>
+<img src=https://github.com/trainart/linux1/blob/main/img/Linux-Essentials-2023-intro_28.jpg width=70% height=70% >
+<br><br>
+<img src=https://github.com/trainart/linux1/blob/main/img/Linux-Essentials-2023-intro_29.jpg width=70% height=70% >
+<br><br>
+<img src=https://github.com/trainart/linux1/blob/main/img/Linux-Essentials-2023-intro_30.jpg width=70% height=70% >
+<br><br>
+<img src=https://github.com/trainart/linux1/blob/main/img/Linux-Essentials-2023-intro_31.jpg width=70% height=70% >
+<br><br>
+<img src=https://github.com/trainart/linux1/blob/main/img/Linux-Essentials-2023-intro_32.jpg width=70% height=70% >
+<br><br>
+<img src=https://github.com/trainart/linux1/blob/main/img/Linux-Essentials-2023-intro_33.jpg width=70% height=70% >
+<br><br>
+<img src=https://github.com/trainart/linux1/blob/main/img/Linux-Essentials-2023-intro_34.jpg width=70% height=70% >
+<br><br>
+<img src=https://github.com/trainart/linux1/blob/main/img/Linux-Essentials-2023-intro_35.jpg width=70% height=70% >
+<br><br>
+<img src=https://github.com/trainart/linux1/blob/main/img/Linux-Essentials-2023-intro_36.jpg width=70% height=70% >
+<br><br>
