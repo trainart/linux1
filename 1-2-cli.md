@@ -95,7 +95,7 @@ echo We learn Linux # this is a comment
 ```
 
 ```bash
-echo "$USER" learns Shell Programming
+echo "$USER" learns Linux OS
 ```
 ```bash
 echo My Shell is: "$SHELL"
@@ -104,7 +104,7 @@ echo My Shell is: "$SHELL"
 * sleep - delay for a specified time 
 
 ```bash
-echo ; echo -n "Be patient " ; sleep 2 ; echo -n "to learn " ; sleep 2 ; echo "Shell Programming in Linux" ; sleep 2 ; echo 
+echo ; echo -n "Be patient " ; sleep 2 ; echo -n "to learn " ; sleep 2 ; echo "LINUX Operating System" ; sleep 2 ; echo 
 
 ```
 
@@ -279,7 +279,7 @@ id -n -u
 կամ
 
 ```bash
-echo -n "Be patient " ; sleep 2 ; echo -n "to learn Shell Programming in Linux" ; sleep 2
+echo -n "Be patient " ; sleep 2 ; echo -n "to learn LINUX" ; sleep 2
 ```
 <hr> 
 
@@ -624,6 +624,9 @@ There is also much rarely used **Visual** mode for highlight or select text for 
 
 > Execute Mode Commands
 
+* **ZZ**    - Quit saving changes if any 
+
+other variants:
 * **:q**	- Quit when no changes have been made after last save
 * **:q!**	- Quit ignoring changes made
 * **:wq**	- Save current file and quit
@@ -636,14 +639,18 @@ There is also much rarely used **Visual** mode for highlight or select text for 
 
 Create new file in `vi` editor
 
-* Type `vi testfile1` to open `vi` with new file `testfile1`
+* Type 
+```bash
+vi testfile1
+``` 
+to open `vi` with new file `testfile1`
 * Press the `i` key to switch to **Insert/Input** mode.
 * Type something like: <br><br> 
-`We are happy to learn`<br>
-`shell programming in Linux`
+`We are interested `<br>
+`to learnLinux`
 <br><br>
 * Press the `ESC` key for command mode
-* Type `:wq` to save and quit the file
+* Type `ZZ` to save and quit the file
 
 
 ## su, sudo
