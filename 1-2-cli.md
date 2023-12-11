@@ -428,9 +428,13 @@ LIST="/usr/bin/" ; ls -l $LIST
 <img src=https://github.com/trainart/linux1/blob/main/img/umask.png  width=70% height=70% >
 <br><br>
 
+![img.png](img/stickybit.png)
 
+![img.png](img/chown.png)
 
+![img.png](img/simlink.png)
 
+![img.png](img/simlink2.png)
 
 ## Access files
 
@@ -505,6 +509,102 @@ There are several tool to view text files contents.
 `ls /usr/bin | grep ^log`
 
 `ls /usr/bin | grep log$`
+
+> **wc** - count number of **lines**, words, characters 
+
+> Օրինակներ
+ 
+`wc -l /etc/passwd`
+
+`wc  -l < /etc/group`
+
+
+
+#### Advanced Text Processing - AWK 
+
+> **AWK**  - extract sections/fields from each line of files
+
+
+Examples
+
+```bash
+awk -F":" '{print $1}' /etc/passwd | grep ^s
+```
+
+```bash
+tail -10 /etc/passwd | awk -F":" '{print $3"--"$1}' | sort -n
+```
+
+```bash
+cat /etc/passwd | grep -E ^'(b|sy)' | awk -F":" '{print "User: "$3"  "$1}'
+```
+
+```bash
+cat /etc/passwd | awk -F":" '/nologin$/ {print $1"-"$5}'
+```
+
+##### Task:
+Modify the above command, to narrow selection by only lines starting with s  
+
+
+<br><br>
+
+#### Advanced Text Processing – SED 
+
+Sed is a very useful **S**tream **ED**itor.  
+It's ideal for batch-editing files or for creating shell scripts to modify existing files in powerful ways. 
+It's rather complex for quick full understanding, so below are only few use cases.
+
+One of sed's most useful commands is the _**substitution**_ command. 
+
+Following command takes a stream from pipe and replaces first occurrence of `:` on each line to `<*>`: 
+
+```bash
+cat /etc/passwd | sed -e 's/:/<*>/'
+```
+
+To replace all occurrences we should add `g` to make replacement global: 
+
+```bash
+cat /etc/passwd | sed -e 's/:/<*>/g' 
+```
+
+Another useful examples with SED: 
+
+Output lines `5-7` 
+
+```bash
+sed -n '5,7p' /etc/group
+```
+
+**-n** causes not to output each processed lines<br>
+**p** command specifies print (output) specified line range: 5-7 
+
+
+Output all lines except `1-20` 
+
+```bash
+sed '1,20d' /etc/group
+```
+
+**d** command causes specified line range: 
+`1-20` to be deleted/removed from output, 
+other lines will be present in output 
+
+Remove comments (lines starting with '#' - `^#`) and empty lines `^$` from output:  
+
+```bash
+sed '/^#\|^$/d' /etc/rsyslog.conf
+```
+
+**d** command causes specified lines: <br>
+**^#** - starting with **#** <br>
+or **\\|** <br>
+**^$** - empty line (**^**- line start, **$** - line end) 
+to be deleted/removed from output, 
+other lines will be present in output. 
+
+
 
 
 
@@ -651,6 +751,9 @@ to open `vi` with new file `testfile1`
 <br><br>
 * Press the `ESC` key for command mode
 * Type `ZZ` to save and quit the file
+
+
+
 
 
 ## su, sudo
