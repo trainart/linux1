@@ -549,63 +549,6 @@ Modify the above command, to narrow selection by only lines starting with s
 
 <br><br>
 
-#### Advanced Text Processing – SED 
-
-Sed is a very useful **S**tream **ED**itor.  
-It's ideal for batch-editing files or for creating shell scripts to modify existing files in powerful ways. 
-It's rather complex for quick full understanding, so below are only few use cases.
-
-One of sed's most useful commands is the _**substitution**_ command. 
-
-Following command takes a stream from pipe and replaces first occurrence of `:` on each line to `<*>`: 
-
-```bash
-cat /etc/passwd | sed -e 's/:/<*>/'
-```
-
-To replace all occurrences we should add `g` to make replacement global: 
-
-```bash
-cat /etc/passwd | sed -e 's/:/<*>/g' 
-```
-
-Another useful examples with SED: 
-
-Output lines `5-7` 
-
-```bash
-sed -n '5,7p' /etc/group
-```
-
-**-n** causes not to output each processed lines<br>
-**p** command specifies print (output) specified line range: 5-7 
-
-
-Output all lines except `1-20` 
-
-```bash
-sed '1,20d' /etc/group
-```
-
-**d** command causes specified line range: 
-`1-20` to be deleted/removed from output, 
-other lines will be present in output 
-
-Remove comments (lines starting with '#' - `^#`) and empty lines `^$` from output:  
-
-```bash
-sed '/^#\|^$/d' /etc/rsyslog.conf
-```
-
-**d** command causes specified lines: <br>
-**^#** - starting with **#** <br>
-or **\\|** <br>
-**^$** - empty line (**^**- line start, **$** - line end) 
-to be deleted/removed from output, 
-other lines will be present in output. 
-
-
-
 
 
 <br><br>
