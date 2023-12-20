@@ -510,6 +510,19 @@ There are several tool to view text files contents.
 
 `ls /usr/bin | grep log$`
 
+
+#### Regular expressions 
+
+* **^**	- beginning of the line
+* **$**	- end of the line
+* **.**	- any single symbol
+* \* - repetition of previous wildcard 0 or more times. 
+    Thus **.*** expression means - "any amount of any symbols"
+* \	- treat next symbol as a literal character. 
+  * \\$ means $ (dollar sign)
+  * \\\\$ means \ (backslash) at the end of line
+
+
 > **wc** - count number of **lines**, words, characters 
 
 > Օրինակներ
@@ -518,9 +531,22 @@ There are several tool to view text files contents.
 
 `wc  -l < /etc/group`
 
+> **cut** - extract sections/fields from each line (of files)
+
+-f  field number
+
+-d  delimiter symbol
+
+Օրինակ
+
+Select 1-st and 3-rd fields from /etc/passwd  separated by “:”
+
+```bash
+cut -f1,3 -d":" /etc/passwd
+```
 
 
-#### Advanced Text Processing - AWK 
+### Advanced Text Processing - AWK 
 
 > **AWK**  - extract sections/fields from each line of files
 
