@@ -226,6 +226,12 @@ Per-User Login Config Files:
 > and reads and executes commands from the FIRST ONE that exists and is readable.  
 
 
+#### PRACTICE
+* `clear` հրամանը մաքրում է էկրանը
+  * ստեղծել `c` անունով `alias`, որ մաքրում է էկրանը
+  * պահպանել այն, որ գործի մյուս մուտքագրվելիս նույնպես
+
+
 Logout
 
 *   `~/.bash_logout`
