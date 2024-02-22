@@ -1,5 +1,28 @@
 # Linux Essentials (level 1) Linux-ի Հիմունքներ (փուլ 1)
 
+
+## Detect Linux Distribution
+
+There are several ways to understand which distribution are you on.
+
+
+```bash
+cat /etc/os-release
+```
+
+```bash
+cat /etc/issue
+```
+
+```bash
+cat /etc/system-release
+```
+(RedHat/CentOS/Rocky versions **in addition** will have (in form of one symlink of other):
+* `/etc/redhat-release`
+* `/etc/centos-release`
+* `/etc/rocky-release`
+
+
 ## Disk/file space usage (du)
 
 * **du** - "_disk usage_" - Ցույց տալ դիրեկտորիայի չափը
