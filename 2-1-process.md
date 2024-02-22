@@ -68,7 +68,8 @@ Here are interesting keys:
 * `t` show directories on the top (before files)
 * `s` sort by size 
 * `n` sort by name
-
+* `r` recalculate disk space
+* `b` run sub-shell in current directory
 
 
 
