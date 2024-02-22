@@ -35,6 +35,43 @@ du -sh /var/*
 * սխալների հաղորդագրությունները ուղարկել /dev/null
 
 
+### NSDU (NCurses Disk Usage) - better solution
+
+`ncdu` - is better solution to understand current disk space usage.
+
+Install it.
+
+```bash
+yum -y install ncdu
+```
+
+How it works:
+You should specify initial directory (if not specified it uses current one).
+Program starts counting disk space inside that directory.
+
+> NOTE! In easc session you will be able to work only inside that dir. 
+> To go upper you need to quit and run program again with other directory path.
+
+
+Example:
+
+```bash
+ncdu /var/log
+```
+
+
+Press `?` to see Help screen.
+
+Here are interesting keys:
+* `d` to delete file or directory (be careful !!!).
+* `g` press multiple times to see usage percentage in different ways.
+* `t` show directories on the top (before files)
+* `s` sort by size 
+* `n` sort by name
+
+
+
+
 ## Disk/file space usage (df)
 
 * **df** - "disk free" - ցույց տալ միացված partition-ները ֆայլային համակարգերը 
