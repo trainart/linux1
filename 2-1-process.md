@@ -5,22 +5,36 @@
 
 There are several ways to understand which distribution are you on.
 
+```bash
+cat /etc/issue
+```
 
 ```bash
 cat /etc/os-release
 ```
 
 ```bash
-cat /etc/issue
-```
-
-```bash
 cat /etc/system-release
 ```
-(RedHat/CentOS/Rocky versions **in addition** will have (in form of one symlink of other):
+
+
+(RedHat/CentOS/Almalinux/Rocky versions **in addition** will have (in form of one symlink of other):
 * `/etc/redhat-release`
 * `/etc/centos-release`
 * `/etc/rocky-release`
+* `/etc/almalinux-release`
+
+```bash
+ls -la /etc/os-release
+```
+
+```bash
+ls -la /etc/system-release
+```
+
+```bash
+ls -la /etc/redhat-release
+```
 
 
 ## Disk/file space usage (du)
