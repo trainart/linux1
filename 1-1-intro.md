@@ -85,7 +85,7 @@
 <br><br>
 * **Oracle VM VirtualBox** միջավայրում միացրեք վիրտուալ մեքենաները
   * **CentOS 7.5** 
-  * **RockyLinux8** 
+  * **AlmaLinux9** 
 <br><br>
 * մուտք գործեք
   * **student** անունով
