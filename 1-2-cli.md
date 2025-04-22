@@ -357,8 +357,7 @@ date +"%d-%m-%Y"
 
 <br> <br>
 
-```text
-
+```pre
 🌳 /             # Root Filesystem - Disk 1,Partition 1
 ├── 📁 bin       
 ├── 📁 etc       
