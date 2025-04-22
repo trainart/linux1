@@ -395,11 +395,11 @@ date +"%d-%m-%Y"
 <br><br>
 
 * Որտեղ է ֆիզիկապես գտնվում /որ partition-ում/ հետևյալ ֆայլը.
-  * ls              `/bin/ls`
-  * userinfo.txt    `/home/student/userinfo.txt`
-  * tmpfile         `/tmp/tmpfile`
-  * systemlib       `/usr/lib/systemlib`
-  * info.doc        `/media/usb/docs/info.doc`
+  * `/bin/ls`
+  * `/home/student/userinfo.txt`
+  * `/tmp/tmpfile`
+  * `/usr/lib/systemlib`
+  * `/media/usb/docs/info.doc`
 
 
 
