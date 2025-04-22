@@ -362,20 +362,20 @@ date +"%d-%m-%Y"
 🌳 /             # Root Filesystem - Disk 1,Partition 1
 ├── 📁 bin       
 ├── 📁 etc       
-├── 📁 **home**      # Mounted from Disk 1, Partition 2
+├── 📁 home      # Mounted from Disk 1, Partition 2
 │   └── 📁 user
-├── 📁 **tmp**       # Mounted from Disk 1, Partition 3
-├── 📁 **usr**       # Mounted from Disk 2 (entire disk)
+├── 📁 tmp       # Mounted from Disk 1, Partition 3
+├── 📁 usr       # Mounted from Disk 2 (entire disk)
 │   ├── 📁 bin   
 │   └── 📁 lib   
 └── 📁 media
-    └── 📁 **usb**   # Auto-mounted USB stick (vfat)
+    └── 📁 usb   # Auto-mounted USB stick (vfat)
         └── 📁 docs
 ```
 
 <br><br>
 
-```text
+```pre
 🖴 Physical Storage Devices:
 ├── Disk 1 (SSD 500GB)
 │   ├── Partition 1 (50GB ext4) → / (root)
