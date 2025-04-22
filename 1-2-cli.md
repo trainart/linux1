@@ -359,18 +359,18 @@ date +"%d-%m-%Y"
 
 ```text
 
-🌳 / (Root Filesystem)
-├── 📁 bin       # From root partition (Disk 1)
-├── 📁 etc       # From root partition (Disk 1)
-├── 📁 home      # Mounted from Disk 1, Partition 2
+🌳 /             # Root Filesystem - Disk 1,Partition 1
+├── 📁 bin       
+├── 📁 etc       
+├── 📁 **home**      # Mounted from Disk 1, Partition 2
 │   └── 📁 user
-├── 📁 tmp       # Mounted from Disk 1, Partition 3
-├── 📁 usr       # Mounted from Disk 2 (entire disk)
-│   ├── 📁 bin   # Non-essential binaries
-│   └── 📁 lib   # Libraries
+├── 📁 **tmp**       # Mounted from Disk 1, Partition 3
+├── 📁 **usr**       # Mounted from Disk 2 (entire disk)
+│   ├── 📁 bin   
+│   └── 📁 lib   
 └── 📁 media
-    └── 📁 usb   # Auto-mounted USB stick (vfat)
-        └── 📁 photos
+    └── 📁 **usb**   # Auto-mounted USB stick (vfat)
+        └── 📁 docs
 ```
 
 <br><br>
