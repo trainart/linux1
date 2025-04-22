@@ -357,7 +357,7 @@ date +"%d-%m-%Y"
 
 <br> <br>
 
-```pre
+<pre>
 🌳 /             # Root Filesystem - Disk 1,Partition 1
 ├── 📁 bin       
 ├── 📁 etc       
@@ -370,11 +370,11 @@ date +"%d-%m-%Y"
 └── 📁 media
     └── 📁 usb   # Auto-mounted USB stick (vfat)
         └── 📁 docs
-```
+</pre>
 
 <br><br>
 
-```pre
+<pre>
 🖴 Physical Storage Devices:
 ├── Disk 1 (SSD 500GB)
 │   ├── Partition 1 (50GB ext4) → / (root)
@@ -385,7 +385,7 @@ date +"%d-%m-%Y"
 │
 └── USB Stick (32GB vfat) → Auto-mounted at /media/usb
 
-```
+</pre>
 
 
 
