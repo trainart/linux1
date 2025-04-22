@@ -261,48 +261,76 @@ date +"%d-%m-%Y"
   * կազմում է հիերարխիկ ֆայլային համակարգ 
   * Լինուքսի յուրահատկությունը՝ 
     * Միասնական ծառ, ոչ թե  **C:**  **D:**  **E:** դիսկեր 
-
-![img.png](img/fs-tree1.png)
-
-![img.png](img/fs-tree2.png)
-
-![img.png](img/fs-tree3.png)
-
+    
+## Linux Filesystem Hierarchy Standard (FHS)
 
 ```text
-🌳 C:\  
-├── 📁 Program Files  
-├── 📁 Users  
-│   ├── 📁 Alice  
-│   └── 📁 Bob  
-├── 📁 Windows  
-└── 📁 Temp  
-
-🌳 D:\  
-├── 📁 Games  
-├── 📁 Movies  
-└── 📁 Backup  
-
+🌳 /
+├── 📁 bin                 # Essential user command binaries
+├── 📁 boot                # Boot loader files (kernel, initramfs)
+├── 📁 dev                 # Device files (hardware interfaces)
+├── 📁 etc                 # System-wide configuration
+│   ├── 📄 passwd          # User accounts
+│   └── 📄 shadow          # Encrypted passwords
+├── 📁 home                # User personal directories
+│   ├── 📁 student         # Student's files
+│   └── 📁 student2        # Student2's files
+├── 📁 lib                 # Essential shared libraries
+├── 📁 media               # Removable media mount points
+│   ├── 📁 usb             # USB drives
+│   └── 📁 cdrom           # Optical drives
+├── 📁 mnt                 # Temporary manual mounts
+├── 📁 opt                 # Optional software packages
+├── 📁 proc                # Virtual process filesystem
+├── 📁 root                # Root user's home
+├── 📁 run                 # Runtime variable data
+├── 📁 sbin                # System administration binaries
+├── 📁 srv                 # Service data
+├── 📁 sys                 # Virtual kernel objects
+├── 📁 tmp                 # Temporary files
+├── 📁 usr                 # Secondary hierarchy
+│   ├── 📁 bin             # Non-essential binaries
+│   ├── 📁 sbin            # Non-essential admin tools
+│   ├── 📁 lib             # Libraries
+│   └── 📁 local           # Locally installed software
+└── 📁 var                 # Variable data
+    ├── 📁 log             # System logs
+    ├── 📁 cache           # Application cache
+    └── 📁 lib             # Dynamic libraries
 ```
 <br> <br>
 
 ```text
-🌳 / (root)  
-├── 📁 bin      (Essential binaries)  
-├── 📁 etc      (Configuration files)  
-├── 📁 home  
-│   ├── 📁 student  
-│   └── 📁 student2  
-├── 📁 media    (Mounted drives)  
-│   ├── 📁 usb  
-│   └── 📁 cdrom  
-├── 📁 mnt      (Manual mounts)  
-└── 📁 var      (Variable data)  
+🌳 C:\ (System Drive)
+├── 📁 Windows           # OS core files
+│   ├── 📁 System32      # Critical system binaries
+│   ├── 📁 Temp          # Temporary files
+│   └── 📄 Registry      # Virtual registry files
+├── 📁 Program Files     # 64-bit applications
+│   ├── 📁 Microsoft
+│   └── 📁 Common Files
+├── 📁 Program Files (x86) # 32-bit applications
+├── 📁 Users            # User profiles
+│   ├── 📁 User         # User documents
+│   │   ├── 📁 Desktop
+│   │   ├── 📁 Documents
+│   │   └── 📁 AppData   # Hidden app data
+│   └── 📁 Public        # Shared files
+├── 📁 ProgramData       # System-wide app data (hidden)
+└── 📁 PerfLogs          # Performance logs
+
+🌳 D:\ (Common Data Drive)
+├── 📁 Projects
+├── 📁 Media
+│   ├── 📁 Music
+│   └── 📁 Videos
+└── 📁 Backups
+
+🌳 E:\ (USB Drive)
+├── 📁 Photos
+└── 📁 Documents
 
 ```
-
-
-
 
 ### Linux Partition Mounting (հատվածնեչի կցում)
 
@@ -311,7 +339,56 @@ date +"%d-%m-%Y"
   * մյուս հատվածները կցվում են (mount) գլխավորի որևէ կետին` դիրեկտորիային
 * Յուրաքանչյուր Partition հատվածը ունի որոշակի ստանդարտի առանձին ֆայլային համակարգ
 
-![img.png](img/partition-mount.png)
+```text
+🖴 SSD (500GB)
+├── C:\ (200GB) → Windows OS
+├── D:\ (200GB) → User Data
+└── [Unallocated 100GB] → Future use
+```
+
+```text
+🖴 SSD (500GB)
+├── / (200GB)     → Linux OS
+├── /home (150GB) → User files
+├── /tmp  (50GB)  → Temporary files
+└── [Unallocated 100GB] → Future use
+```
+
+
+<br> <br>
+
+```text
+
+🌳 / (Root Filesystem)
+├── 📁 bin       # From root partition (Disk 1)
+├── 📁 etc       # From root partition (Disk 1)
+├── 📁 home      # Mounted from Disk 1, Partition 2
+│   └── 📁 user
+├── 📁 tmp       # Mounted from Disk 1, Partition 3
+├── 📁 usr       # Mounted from Disk 2 (entire disk)
+│   ├── 📁 bin   # Non-essential binaries
+│   └── 📁 lib   # Libraries
+└── 📁 media
+    └── 📁 usb   # Auto-mounted USB stick (vfat)
+        └── 📁 photos
+```
+
+<br><br>
+
+```text
+🖴 Physical Storage Devices:
+├── Disk 1 (SSD 500GB)
+│   ├── Partition 1 (50GB ext4) → / (root)
+│   ├── Partition 2 (400GB ext4) → /home
+│   └── Partition 3 (50GB ext4) → /tmp
+│
+├── Disk 2 (HDD 1TB) → Entire disk as /usr (ext4)
+│
+└── USB Stick (32GB vfat) → Auto-mounted at /media/usb
+
+```
+
+
 
 
 ճանապարհը դեպի ՝report.doc՝ ֆայլը նշելու տաբերակներ.
