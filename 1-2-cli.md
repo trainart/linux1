@@ -389,7 +389,6 @@ date +"%d-%m-%Y"
 ├── Disk 2 (HDD 1TB) → Entire disk as /usr (ext4)
 │
 └── USB Stick (32GB vfat) → Auto-mounted at /media/usb
-
 </pre>
 
 <br><br>
