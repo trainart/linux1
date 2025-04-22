@@ -264,7 +264,7 @@ date +"%d-%m-%Y"
     
 ## Linux Filesystem Hierarchy Standard (FHS)
 
-```text
+<pre>
 🌳 /
 ├── 📁 bin                 # Essential user command binaries
 ├── 📁 boot                # Boot loader files (kernel, initramfs)
@@ -297,10 +297,11 @@ date +"%d-%m-%Y"
     ├── 📁 log             # System logs
     ├── 📁 cache           # Application cache
     └── 📁 lib             # Dynamic libraries
-```
+</pre>
+
 <br> <br>
 
-```text
+<pre>
 🌳 C:\ (System Drive)
 ├── 📁 Windows           # OS core files
 │   ├── 📁 System32      # Critical system binaries
@@ -329,8 +330,7 @@ date +"%d-%m-%Y"
 🌳 E:\ (USB Drive)
 ├── 📁 Photos
 └── 📁 Documents
-
-```
+</pre>
 
 ### Linux Partition Mounting (հատվածնեչի կցում)
 
@@ -339,21 +339,20 @@ date +"%d-%m-%Y"
   * մյուս հատվածները կցվում են (mount) գլխավորի որևէ կետին` դիրեկտորիային
 * Յուրաքանչյուր Partition հատվածը ունի որոշակի ստանդարտի առանձին ֆայլային համակարգ
 
-```text
+<pre>
 🖴 SSD (500GB)
 ├── C:\ (200GB) → Windows OS
 ├── D:\ (200GB) → User Data
 └── [Unallocated 100GB] → Future use
-```
+</pre>
 
-```text
+<pre>
 🖴 SSD (500GB)
 ├── / (200GB)     → Linux OS
 ├── /home (150GB) → User files
 ├── /tmp  (50GB)  → Temporary files
 └── [Unallocated 100GB] → Future use
-```
-
+</pre>
 
 <br> <br>
 
