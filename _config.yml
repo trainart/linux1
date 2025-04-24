@@ -1,4 +1,3 @@
 
-theme: minima  # Default Jekyll theme
-plugins:
-  - jekyll-feed
+remote_theme: jekyll/minima
+
