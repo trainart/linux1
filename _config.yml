@@ -1,2 +1,4 @@
 
-theme: midnight
+theme: minima  # Default Jekyll theme
+plugins:
+  - jekyll-feed
