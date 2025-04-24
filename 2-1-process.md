@@ -1,8 +1,6 @@
 ---
 layout: default
-title: Linux Essentials (level 1) Linux-ի Հիմունքներ (փուլ 1)
 ---
-
 # Linux Essentials (level 1) Linux-ի Հիմունքներ (փուլ 1)
 
 
