@@ -554,6 +554,15 @@ echo -n "Be patient " ; sleep 2 ; echo -n "to learn LINUX" ; sleep 2
 
 `../home/student`  մեկ մակարդակ վերև և home/student
 
+
+`.`-ով սկսվող ֆայլերի օրինակ ՝~/.bash_history՝ - նախորդ հրամանները պահվում են այստեղ:
+
+```bash
+ls -la ~/.bash_history
+```
+
+Կան նաև այլ նման ֆայլեր
+
 ```bash
 ls -la ~/.bash*
 ```
@@ -765,6 +774,10 @@ There are several tool to view text files contents.
 `ls /usr/bin | grep ^log`
 
 `ls /usr/bin | grep log$`
+
+Նախորդ հրամանների պատմության մեջ որոնում
+
+՝history | grep ls՝
 
 
 #### Regular expressions 
