@@ -75,18 +75,4 @@
 <br><br>
 <img src=https://github.com/trainart/linux1/blob/main/img/Linux-Essentials-2023-intro_35.jpg width=70% height=70% >
 <br><br>
-<img src=https://github.com/trainart/linux1/blob/main/img/Linux-Essentials-2023-intro_36.jpg width=70% height=70% >
-<br><br>
-
-> Գործնական մաս 
-> <br><br>
-> Linux համակարգը որպես վիրտուալ մեքենա (VM) 
-
-<br><br>
-* **Oracle VM VirtualBox** միջավայրում միացրեք վիրտուալ մեքենան
-
-<br><br>
-* մուտք գործեք
-  * **student** անունով
-  * **123456** գաղտնաբառով
 
