@@ -258,6 +258,10 @@ date +"%d-%m-%Y"
 Ելքը - ՝q՝ 
 
 ```bash
+man cal
+```
+
+```bash
 man echo
 ```
 
