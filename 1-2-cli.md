@@ -727,12 +727,10 @@ LIST="/usr/bin/" ; ls -l $LIST
 
 **`ln -s <original> [<link>]`**
 
-> Օրինակներ
-
 <br><br><hr>
 
-#### Example relative path symlink
-* ՀԱՐԱԲԵՐԱԿԱՆ ճանախարհով հղում
+#### Example: relative path symlink
+* Օրինակ. ՀԱՐԱԲԵՐԱԿԱՆ ճանախարհով հղում
 
 Ստեղծեք `~/linkdemo` դիրեկտորիա և դրանում `origfile` ֆայլ 
 
