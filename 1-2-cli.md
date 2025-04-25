@@ -702,7 +702,7 @@ LIST="/usr/bin/" ; ls -l $LIST
 
 ![img.png](img/chown.png)
 
-### Links ( Hard link, Symbolic/Soft link )
+### Links (Hard,Symbolic/Soft)
 
 Հղումները (links) թույլ են տալիս ֆայլերի և դիրեկտորիաների համար մեկից ավելի անուն ունենալ:
 
