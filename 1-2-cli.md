@@ -550,9 +550,7 @@ echo -n "Be patient " ; sleep 2 ; echo -n "to learn LINUX" ; sleep 2
 
 <br><br>
 
-
 `../home/student`  մեկ մակարդակ վերև և home/student
-
 
 `.`-ով սկսվող ֆայլերի օրինակ ՝~/.bash_history՝ - նախորդ հրամանները պահվում են այստեղ:
 
@@ -566,7 +564,6 @@ ls -la ~/.bash_history
 ls -la ~/.bash*
 ```
 
-
 <hr>
 
 > Հիմնական հրամաններ
@@ -576,7 +573,6 @@ ls -la ~/.bash*
 * `rm <file>`  			Հեռացնել ֆայլ/դիրեկտորիա
 * `mkdir <newdir>`		 Ստեղծել դիրեկտորիա 
 * `alias <alias> <command>` Ստեղծել հրամանի կրճատում 
-
 
 > Հրամանների օրինակներ
 
@@ -611,7 +607,6 @@ echo 'alias del="rm -i"' >> ~/.bash_aliases
 
 ```
 
-
 ```bash 
 del f*
 ```
@@ -619,7 +614,6 @@ del f*
 ```bash 
 cd ~ ; rm -r d1
 ```
-
 
 <hr>
 
@@ -667,11 +661,9 @@ Syntax: **VARNAME=VALUE**
 The example assigns the value `/usr/bin` to the variable called `LIST`
 Prefix the variable name with `$`, which will give the value stored in that variable.
 
-
 ```bash
 LIST="/usr/bin/" ; ls -l $LIST
 ```
-
 
 <br><br>
 
