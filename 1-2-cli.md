@@ -712,7 +712,7 @@ LIST="/usr/bin/" ; ls -l $LIST
   * ~~Hard link~~ 
     * խուսափեք օգտագործել, բայց իմացեք դրանց մասին, քանի որ Լինուքսի ֆայլային համակարգի դիրեկտորիաների կառուցվածքը հիմնված է դրա վրա
     
-  * Symbolic/Soft link (Shortcut) - հղումների հիմնական օգտագործվող ձևն է 
+  * Symbolic/Soft link (Shortcut)
     * կարող է ստեղծվել դիրեկտորիաների համար
     * կարող է գործել մեկ partition-ից մյուս partition
     * սիմվոլիկ հղումը ջնջելիս օրիգինալ ֆայլը պահպանվում է
@@ -726,6 +726,19 @@ LIST="/usr/bin/" ; ls -l $LIST
 Սիմվոլիկ հղումը ստեղծվում է, եթե առկա է `**-s**` ընտրանքը
 
 **`ln -s <original> [<link>]`**
+
+
+Սիմվոլիկ հղումը հղումների հիմնական օգտագործվող ձևն է: Այն ակտիվորեն օգտագործվում է հենց Լինուկս համակարգում:
+
+Օրինակներ.
+
+```bash
+ls -l /etc/alternatives
+```
+
+```bash
+ls -l /etc/ssl
+```
 
 <hr>
 
@@ -765,7 +778,7 @@ cat  /tmp/other_link_dir/link_rel
 ls -la  /tmp/other_link_dir/link_rel 
 ```
 
-Ինչո՞ւ չի գործում:
+> ՀԱՐՑ. Ինչո՞ւ չի գործում:
 
 <hr>
 
@@ -804,7 +817,7 @@ cat  /tmp/other_link_dir/link_abs
 ls -la  /tmp/other_link_dir/link*  
 ```
 
-Ինչո՞ւ է գործում:
+> ՀԱՐՑ. Ինչո՞ւ է գործում:
 
 <hr>
 
@@ -820,6 +833,8 @@ mv ~/linkdemo/origfile2 ~
 ```bash
 ls -la  /tmp/other_link_dir/link*  
 ```
+
+> ՀԱՐՑ. Ինչո՞ւ այլևս չի գործում:
 
 <hr>
 
