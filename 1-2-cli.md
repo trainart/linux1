@@ -727,7 +727,7 @@ LIST="/usr/bin/" ; ls -l $LIST
 
 **`ln -s <original> [<link>]`**
 
-<br><br><hr>
+<hr>
 
 #### Example: relative path symlink
 * Օրինակ. ՀԱՐԱԲԵՐԱԿԱՆ ճանախարհով հղում
@@ -767,9 +767,10 @@ ls -la  /tmp/other_link_dir/link_rel
 
 Ինչո՞ւ չի գործում:
 
-<br><br><hr>
+<hr>
 
-* ԱՄԲՈՂՋԱԿԱՆ ճանախարհով հղում
+#### Example: absolute path symlink
+* Օրինակ. ԱՄԲՈՂՋԱԿԱՆ ճանախարհով հղում
 
 Ստեղծեք `origfile2` ֆայլ 
 
@@ -805,9 +806,10 @@ ls -la  /tmp/other_link_dir/link*
 
 Ինչո՞ւ է գործում:
 
-<br><br><hr>
+<hr>
 
-* Օրիգինալ ֆայլի տեղափոխում
+#### Example: Original file move
+* Օրինակ. Օրիգինալ ֆայլի տեղափոխում
 
 Սակայն եթե տեղափոխեք կամ վերանվանենք օրիգինալ ֆայլը, հղումը այլևս չի գորցի
 
@@ -819,8 +821,24 @@ mv ~/linkdemo/origfile2 ~
 ls -la  /tmp/other_link_dir/link*  
 ```
 
+<hr>
+
+#### Example: Directory symlink
+* Օրինակ. Սիմվոլիկ հղում դիրեկտորիաների համար
+
+```bash
+ln -s ~/linkdemo ~/symlink2linkdemo
+```
+
+```bash
+ls -l ~/symlink2linkdemo
+```
+
+
+
 ✅ ՀԱՐԱԲԵՐԱԿԱՆ ճանախարհով սիմվոլիկ հղումները ավելի կարճ են և փոխադրելի, բայց ճչեն գորցի, եթե հղումը տեղափոխվում է։
 ✅ ԱՄԲՈՂՋԱԿԱՆ ճանախարհով սիմվոլիկ հղումմները միշտ գործում են, քանի դեռ օրիգիինալ ֆայլը մնում է տեղում:
+
 
 
 Այլ օրինակներ
