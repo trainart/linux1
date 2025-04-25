@@ -721,15 +721,15 @@ LIST="/usr/bin/" ; ls -l $LIST
   
 Հղումները ստեղծվում են **ln** հրամանով
 
-`ln [options] <original> [<link>]`
+**ln [options] <original> [<link>]**
 
 Սիմվոլիկ հղումը ստեղծվում է, եթե առկա է `**-s**` ընտրանքը
-`ln -s <original> [<link>]`
 
-<br><br><hr>
+**ln -s <original> [<link>]**
+
 
 > Օրինակներ
-
+<br><br><hr>
 
 * ՀԱՐԱԲԵՐԱԿԱՆ ճանախարհով հղում
 
