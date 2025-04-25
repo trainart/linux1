@@ -706,7 +706,24 @@ LIST="/usr/bin/" ; ls -l $LIST
 
 ![img.png](img/simlink.png)
 
-![img.png](img/simlink2.png)
+Soft (symbolic) links in Linux **store the path** to the target file. 
+If you use a **relative path**, the link breaks if moved. 
+If you use an **absolute path**, it stays valid (but fails if the target is moved).
+
+> Օրինակներ
+
+```bash
+cd 
+ln -s f1 f2
+ln -s /home/user/f1 /tmp/f2
+```
+
+```bash
+mkdir d2
+ln -s d2 d3
+ls -l
+```
+
 
 ## Access to files
 
