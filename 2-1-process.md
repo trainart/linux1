@@ -79,14 +79,14 @@ du -sh /var/*
 Install it.
 
 ```bash
-yum -y install ncdu
+sudo dnf -y install ncdu
 ```
 
 How it works:
 You should specify initial directory (if not specified it uses current one).
 Program starts counting disk space inside that directory.
 
-> NOTE! In easc session you will be able to work only inside that dir. 
+> NOTE! In each session you will be able to work only inside that dir. 
 > To go upper you need to quit and run program again with other directory path.
 
 
@@ -160,7 +160,7 @@ find /usr/sbin -size +100k -name "t*" -ok cp {} /tmp \;
 ```
 
 
-## Processes  Պրոցեսներ
+## Processes
 
 **Պրոցես** = **աշխատող ծրագիր**
 
@@ -249,8 +249,7 @@ top
 
 ![img.png](img/signals.png)
 
-### Background processes Ետին պլանի պրոցեներ
-
+### Background processes 
 
 ![img.png](img.png)
 
