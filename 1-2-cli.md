@@ -712,6 +712,38 @@ If you use an **absolute path**, it stays valid (but fails if the target is move
 
 > Օրինակներ
 
+Ստեղծեք ֆայլ
+```bash
+mkdir -p /tmp/demo && cd /tmp/demo
+echo "Important data" > original.txt
+```
+
+Ստեղծեք symlink հղում ՀԱՐԱԲԵՐԱԿԱՆ ճանախարհով
+```bash
+ln -s original.txt rel_link.txt
+```
+
+Ստուգեք, որ գործում է
+```bash
+cat rel_link.txt 
+```
+
+Տեղափոխեք հղումը
+```bash
+mkdir other_folder
+mv rel_link.txt other_folder/
+```
+
+Ստուգեք, որ գործում է
+
+```bash
+cat other_folder/rel_link.txt  
+```
+
+Ինչո՞ւ չի գործում:
+
+Այլ օրինակներ
+
 ```bash
 cd 
 ln -s f1 f2
