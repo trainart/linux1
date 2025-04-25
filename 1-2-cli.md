@@ -201,9 +201,9 @@ CLI / Shell / Bash աշխատում է ինտերակտիվ եղանակով, ո
 </pre>
 
 
+### Command examples
 
-### Հրամանների օրինակներ
-
+Հրամանների օրինակներ
 
 * echo - display a line of text 
 ```bash
