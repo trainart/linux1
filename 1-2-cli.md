@@ -702,13 +702,30 @@ LIST="/usr/bin/" ; ls -l $LIST
 
 ![img.png](img/chown.png)
 
-### File Links
+### Links ( Hard link, Symbolic/Soft link )
 
-![img.png](img/simlink.png)
+Հղումները (links) թույլ են տալիս ֆայլերի և դիրեկտորիաների համար մեկից ավելի անուն ունենալ:
 
-Soft (symbolic) links in Linux **store the path** to the target file. 
-If you use a **relative path**, the link breaks if moved. 
-If you use an **absolute path**, it stays valid (but fails if the target is moved).
+Ֆայլային համակարգի տարբեր վայրերում կարելի է ներկայացնել նույն ֆայլը կամ դիրեկտորիան առանց տվյալները պատճենելու: 
+
+* Հղումները լինում են 2 տեսակի 
+  * ~~Hard link~~ 
+    * խուսափեք օգտագործել, բայց իմացեք դրանց մասին, քանի որ Լինուքսի ֆայլային համակարգի դիրեկտորիաների կառուցվածքը հիմնված է դրա վրա
+    
+  * Symbolic/Soft link (Shortcut) - հղումների հիմնական օգտագործվող ձևն է 
+    * կարող է ստեղծվել դիրեկտորիաների համար
+    * կարող է գործել մեկ partition-ից մյուս partition
+    * սիմվոլիկ հղումը ջնջելիս օրիգինալ ֆայլը պահպանվում է
+    * օրիգինալ ֆայլը ջնջելիս սիմվոլիկ հղումը պահպանվում է
+
+  
+Հղումները ստեղծվում են **ln** հրամանով
+
+`ln [options] <original> [<link>]`
+
+Սիմվոլիկ հղումը ստեղծվում է, եթե առկա է `**-s**` ընտրանքը
+`ln -s <original> [<link>]`
+
 
 > Օրինակներ
 
