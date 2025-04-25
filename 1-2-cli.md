@@ -712,35 +712,94 @@ If you use an **absolute path**, it stays valid (but fails if the target is move
 
 > Օրինակներ
 
-Ստեղծեք ֆայլ
+* ՀԱՐԱԲԵՐԱԿԱՆ ճանախարհով հղում
+
+Ստեղծեք `~/linkdemo` դիրեկտորիա և դրանում `origfile` ֆայլ 
+
 ```bash
-mkdir -p /tmp/demo && cd /tmp/demo
-echo "Important data" > original.txt
+mkdir -p ~/linkdemo && cd ~/linkdemo
+echo "Original file for soft link with RELATIVE path"  > origfile
 ```
 
 Ստեղծեք symlink հղում ՀԱՐԱԲԵՐԱԿԱՆ ճանախարհով
 ```bash
-ln -s original.txt rel_link.txt
+ln -s origfile link_rel
 ```
 
-Ստուգեք, որ գործում է
+Ստուգեք, որ գործում է, դիտելով պարունակությունը
 ```bash
-cat rel_link.txt 
+cat link_rel
 ```
 
 Տեղափոխեք հղումը
 ```bash
-mkdir other_folder
-mv rel_link.txt other_folder/
+mkdir /tmp/other_link_dir
+mv link_rel /tmp/other_link_dir/
 ```
 
-Ստուգեք, որ գործում է
+Ստուգեք, արդյո՞ք գործում է
 
 ```bash
-cat other_folder/rel_link.txt  
+cat  /tmp/other_link_dir/link_rel  
+```
+
+```bash
+ls -la  /tmp/other_link_dir/link_rel 
 ```
 
 Ինչո՞ւ չի գործում:
+
+* ԱՄԲՈՂՋԱԿԱՆ ճանախարհով հղում
+
+Ստեղծեք `origfile2` ֆայլ 
+
+```bash
+echo "Original file for soft link with ABSOLUTE path" > ~/linkdemo/origfile2
+```
+
+Ստեղծեք symlink հղում ԱՄԲՈՂՋԱԿԱՆ ճանախարհով
+```bash
+cd ~/linkdemo
+ln -s ~/linkdemo/origfile2 link_abs
+```
+
+Ստուգեք, որ գործում է, դիտելով պարունակությունը
+```bash
+cat link_abs
+```
+
+Տեղափոխեք հղումը
+```bash
+mv link_abs /tmp/other_link_dir/
+```
+
+Ստուգեք, արդյո՞ք գործում է
+
+```bash
+cat  /tmp/other_link_dir/link_abs  
+```
+
+```bash
+ls -la  /tmp/other_link_dir/link*  
+```
+
+Ինչո՞ւ է գործում:
+
+* Օրիգինալ ֆայլի տեղափոխում
+
+Սակայն եթե տեղափոխեք կամ վերանվանենք օրիգինալ ֆայլը, հղումը այլևս չի գորցի
+
+```bash
+mv ~/linkdemo/origfile2 ~ 
+```
+
+```bash
+ls -la  /tmp/other_link_dir/link*  
+```
+
+✅ ՀԱՐԱԲԵՐԱԿԱՆ ճանախարհով սիմվոլիկ հղումները ավելի կարճ են և փոխադրելի, բայց ճչեն գորցի, եթե հղումը տեղափոխվում է։
+✅ ԱՄԲՈՂՋԱԿԱՆ ճանախարհով սիմվոլիկ հղումմները միշտ գործում են, քանի դեռ օրիգիինալ ֆայլը մնում է տեղում:
+
 
 Այլ օրինակներ
 
