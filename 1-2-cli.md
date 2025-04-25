@@ -852,29 +852,20 @@ ls -l ~/symlink2linkdemo
 
 
 ✅ ՀԱՐԱԲԵՐԱԿԱՆ ճանախարհով սիմվոլիկ հղումները ավելի կարճ են և փոխադրելի, բայց ճչեն գորցի, եթե հղումը տեղափոխվում է։
+
 ✅ ԱՄԲՈՂՋԱԿԱՆ ճանախարհով սիմվոլիկ հղումմները միշտ գործում են, քանի դեռ օրիգիինալ ֆայլը մնում է տեղում:
 
 
+## Access to files (view,parse)
 
-Այլ օրինակներ
+Տեքստային ֆայլերը մեծ դեր ունեն Լինուքսում: Դրանք հանդիպում են բազմաթիվ վայրերում, 
+և անհրաժեշտ է կարողանալ դիտել և մշակել դրանք։
 
-```bash
-cd 
-ln -s f1 f2
-ln -s /home/user/f1 /tmp/f2
-```
+Տեքստային ֆայլերի պարունակությունը դիտելու համար կան մի քանի գործիքներ։
 
-```bash
-mkdir d2
-ln -s d2 d3
-ls -l
-```
+<hr>
 
-
-## Access to files
-
-There are several tool to view text files contents.
-
+### less
 > **less** - view/browse text file page-by-page
 
 * **Enter/DOWNARROW**	– մեկ տող ներքև
@@ -891,7 +882,9 @@ There are several tool to view text files contents.
 `less /etc/services`
 `ls /usr/bin | sort -r | less`
 
-<br><br>
+<hr>
+
+### cat
 
 > **cat** - output whole file to STDOUT (default - terminal)
 
@@ -903,7 +896,9 @@ There are several tool to view text files contents.
 
 `cat /etc/services | sort -r | less`
 
-<br><br>
+<hr>
+
+### head
 
 > **head** - output some first lines (default 10) of file STDOUT (default - terminal)
 
@@ -917,7 +912,9 @@ There are several tool to view text files contents.
 
 `head -1 /etc/services >> /tmp/h1`
  
-<br><br>
+<hr>
+
+### tail
 
 > **tail** - output some last lines (default 10) of file STDOUT (default - terminal)
 
@@ -931,7 +928,9 @@ There are several tool to view text files contents.
 
 `tail -1 /etc/services >> /tmp/s1`
 
-<br><br>
+<hr>
+
+### grep
 
 > **grep** - filter lines based on pattern
 
@@ -950,7 +949,7 @@ There are several tool to view text files contents.
 ՝history | grep ls՝
 
 
-## Regular expressions 
+#### Regular expressions 
 
 * **^**	- beginning of the line
 * **$**	- end of the line
@@ -961,6 +960,9 @@ There are several tool to view text files contents.
   * \\$ means $ (dollar sign)
   * \\\\$ means \ (backslash) at the end of line
 
+<hr>
+
+### wc
 
 > **wc** - count number of **lines**, words, characters 
 
@@ -984,11 +986,11 @@ Select 1-st and 3-rd fields from /etc/passwd  separated by “:”
 cut -f1,3 -d":" /etc/passwd
 ```
 
+<hr>
 
-### Advanced Text Processing - AWK 
+## Advanced Text Processing - AWK 
 
 > **AWK**  - extract sections/fields from each line of files
-
 
 Examples
 
@@ -1011,7 +1013,7 @@ cat /etc/passwd | awk -F":" '/nologin$/ {print $1"-"$5}'
 ### Task:
 Modify the above command, to narrow selection by only lines starting with s  
 
-<br><br>
+<hr>
 
 ## I/O Redirection
 
@@ -1031,7 +1033,7 @@ Modify the above command, to narrow selection by only lines starting with s
 * `ls /e > ~/stdout 2> ~/stderr`
 * `ls /e > ~/stdout 2> /dev/null`
 
-<br><br>
+<hr>
 
 ## Pipes
 
@@ -1080,7 +1082,8 @@ _( **echo $?**  - ցույց է տալիս վերջին հրամանի ելքի 
   ```
   
 
-<br><br>
+<hr>
+
 ## Text Editors (Խմբագիրներ)
 
 * **nano**		Standard Linux editor - for newcomers - present in most LINUX versions
@@ -1088,6 +1091,7 @@ _( **echo $?**  - ցույց է տալիս վերջին հրամանի ելքի 
 
 There are more editors, like **mcedit** or **joe**, which are mostly not installed by default.
 
+<hr>
 
 ### Nano editor basics
 
@@ -1098,6 +1102,7 @@ When you run `nano` main commands are displayed at the bottom.
 Most commands are prefixed with `^`, which means `Ctrl` key<br> 
 *  `^G` means press `Ctrl`+`g`  (NOT `G`)
 
+<hr>
 
 ### Vim/Vi basics
 
@@ -1133,7 +1138,7 @@ other variants:
 <br><br>
 
 
-### PRACTICE
+#### PRACTICE
 
 Create new file in `vi` editor
 
@@ -1150,6 +1155,7 @@ to open `vi` with new file `testfile1`
 * Press the `ESC` key for command mode
 * Type `ZZ` to save and quit the file
 
+<hr>
 
 ## su, sudo
 
