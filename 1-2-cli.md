@@ -712,21 +712,6 @@ LIST="/usr/bin/" ; ls -l $LIST
   * դիրեկտորիանե - ժառանգել նորաստեղծ ֆայլի GID ըստ տվյալ դիրեկտորիայի խմնբի
 
 
-### Chown
-
-* chown թույլ է տալիս ադմինիստրատորին  փոխել ֆայլի տիրոջը (և խումբը) (**CHange OWNer**)
-
-`chown [options] username[:groupname] file/foldername`
-
-`chown -R root:root d1`
-
-* chgrp թույլ է տալիս ադմինիստրատորին  փոխել ֆայլի խումբը (**CHange GRouP**)
-
-`chgrp [options] groupname file/foldername`
-
-`chgrp root d1`
-
-
 ### Links (Hard,Symbolic/Soft)
 
 Հղումները (links) թույլ են տալիս ֆայլերի և դիրեկտորիաների համար մեկից ավելի անուն ունենալ:
@@ -1188,3 +1173,38 @@ to open `vi` with new file `testfile1`
 <br><br>
 ![img.png](img/sudo.png)
 <br><br>
+
+## Chown
+
+* chown թույլ է տալիս ադմինիստրատորին փոխել ֆայլի տիրոջը (և խումբը) (**CHange OWNer**)
+
+`chown [options] username[:groupname] file/foldername`
+
+```bash
+touch file4root
+sudo chown -R root:root file4root
+```
+
+```bash
+mkdir dir4root
+touch dir4root/file4root2
+touch dir4root/file4root3
+sudo chown -R root:root dir4root
+ls -l dir4root
+```
+
+
+* chgrp թույլ է տալիս ադմինիստրատորին փոխել ֆայլի խումբը (**CHange GRouP**)
+
+`chgrp [options] groupname file/foldername`
+
+```bash
+touch file_for_rootgrp
+sudo chgrp root file_for_rootgrp
+```
+
+> Հիմնականում այս հրամանի կարիքը չի լինում, քանի որ շատ հազվադեպ է պատահում, 
+> որ կարիք լինի փոխել միայն խումբը։ 
+> Հիմնակաում պետք է լինում փոխել և տիրոջը և խումբը միասին, ինչն էլ անում է `chown`-ը 
+
+
