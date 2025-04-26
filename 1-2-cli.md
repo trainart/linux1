@@ -714,7 +714,18 @@ LIST="/usr/bin/" ; ls -l $LIST
 
 ### Chown
 
-![img.png](img/chown.png)
+* chown թույլ է տալիս ադմինիստրատորին  փոխել ֆայլի տիրոջը (և խումբը) (**CHange OWNer**)
+
+`chown [options] username[:groupname] file/foldername`
+
+`chown -R root:root d1`
+
+* chgrp թույլ է տալիս ադմինիստրատորին  փոխել ֆայլի խումբը (**CHange GRouP**)
+
+`chgrp [options] groupname file/foldername`
+
+`chgrp root d1`
+
 
 ### Links (Hard,Symbolic/Soft)
 
