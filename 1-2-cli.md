@@ -1092,10 +1092,10 @@ Linux I/O Redirection
 <pre>
 ┌──────────┐       ┌─────────┐        ┌────────┐
 │          │ STDIN │         │ STDOUT │ Screen │
-│ Keyboard │ ────▶ │ Process │ > ────▶│        │
+│ Keyboard │ ----> │ Process │ -----> │        │
 │          │       │         │        └────────┘
 └──────────┘       └─────────┘        ┌────────┐
-                    └─ STDERR 2> ────▶│  FILE  │
+                    └─ STDERR 2> ---->│  FILE  │
                                       └────────┘
 </pre>
 
@@ -1118,7 +1118,7 @@ Linux I/O Redirection
 <pre>
 ┌──────────┐       ┌─────────┐        ┌────────┐
 │          │ STDIN │         │        │        │
-│ Keyboard │ ────▶ │ Process │        │        │
+│ Keyboard │  -->  │ Process │        │        │
 │          │       │         │        └────────┘
 └──────────┘       └─────────┘        ┌────────┐
                     └─ STDOUT >  ────▶│  FILE  │
