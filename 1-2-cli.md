@@ -1075,28 +1075,56 @@ Linux I/O Redirection
 
 * Normal I/O
 <pre>
-┌──────────┐       ┌──────────┐       ┌──────────┐
-│ Keyboard │  -->  │ Program  │  -->  │  Screen  │
-└──────────┘ stdin └──────────┘ stdout└──────────┘
-                                    └─ stderr ──────▶ Screen
+┌──────────┐       ┌──────────┐  STDOUT   ┌──────────┐
+│          │ STDIN │          │   ───▶    │  Screen  │
+│ Keyboard │  ───▶ │  Process │   ───▶    │          │
+│          │       │          │  STDERR   └──────────┘
+└──────────┘       └──────────┘    
 </pre>
-  * stdin (0)  — input from keyboard
 
-  * stdout (1) — normal output
+  * STDIN (FD0)  — input from keyboard  (`<`)
+  * STDOUT (FD1) — normal output  (`>` `1>`)
+  * STDERR (FD2) — error messages (`2>`)
 
-  * stderr (2) — error messages
 
+* Redirect Only Standard Error (`2>`)
+
+<pre>
+┌──────────┐       ┌─────────┐        ┌────────┐
+│          │ STDIN │         │ STDOUT │ Screen │
+│ Keyboard │ ────▶ │ Process │ > ────▶│        │
+│          │       │         │        └────────┘
+└──────────┘       └─────────┘        ┌────────┐
+                    └─ STDERR 2> ────▶│  FILE  │
+                                      └────────┘
+</pre>
 
 
 * Redirect Only Standard Output (`>`)
 
 <pre>
-┌──────────┐       ┌──────────┐       ┌────────┐
-│ Keyboard │  -->  │ Program  │  -->  │  File  │
-└──────────┘ stdin └──────────┘ stdout└────────┘
-                                    └─ stderr ──────▶ Screen
+┌──────────┐       ┌─────────┐         ┌────────┐
+│          │ STDIN │         │ STDERR  │ Screen │
+│ Keyboard │ ────▶ │ Process │ 2> ────▶│        │
+│          │       │         │         └────────┘
+└──────────┘       └─────────┘        ┌────────┐
+                    └─ STDOUT >  ────▶│  FILE  │
+                                      └────────┘
 </pre>
 
+
+* Redirect Both Standard Output and Error Together (&>)
+
+<pre>
+┌──────────┐       ┌─────────┐        ┌────────┐
+│          │ STDIN │         │        │        │
+│ Keyboard │ ────▶ │ Process │        │        │
+│          │       │         │        └────────┘
+└──────────┘       └─────────┘        ┌────────┐
+                    └─ STDOUT >  ────▶│  FILE  │
+                    └─ STDERR 2> ────▶│        │
+                                      └────────┘
+</pre>
 
 
 
