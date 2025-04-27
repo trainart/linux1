@@ -660,7 +660,7 @@ Variable names are uppercase by convention, but lowercase and other symbols can 
 
 Syntax: **VARNAME=VALUE**
 
-> Note: There should be no space around `=` sign 
+> ✅ Note: There should be no space around `=` sign 
 
 The example assigns the value `/usr/bin` to the variable called `LIST`
 Prefix the variable name with `$`, which will give the value stored in that variable.
@@ -860,7 +860,6 @@ ln -s ~/linkdemo ~/symlink2linkdemo
 ```bash
 ls -l ~/symlink2linkdemo
 ```
-
 
 
 ✅ ՀԱՐԱԲԵՐԱԿԱՆ ճանապարհով սիմվոլիկ հղումները ավելի կարճ են և փոխադրելի, բայց չեն գորցի, եթե հղումը տեղափոխվի։
