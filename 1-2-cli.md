@@ -692,7 +692,8 @@ LIST="/usr/bin/" ; ls -l $LIST
 ### Umask
 
 <img src=https://github.com/trainart/linux1/blob/main/img/umask.png  width=70% height=70% >
-<br><br>
+
+<hr>
 
 ### Additional Attributes
 
