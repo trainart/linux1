@@ -1213,7 +1213,7 @@ cat ~/stdall
 ls /home /ho &> /dev/null 
 ```
 
-#### PRACTICE
+### PRACTICE
 
 * Գրեք հրամանների հերթականության, որի արդյունքում `/etc/group` ֆայլի տողերի քանակը կգրվի `~/grpln` ֆայլի մեջ:
 Ֆայլում պետք է լինի ՄԻԱՅՆ տողերի քանակի թիվը:
@@ -1254,7 +1254,20 @@ yes $'To be\nor not\nto be\nthat is the\nquestion\n' | head -30 > shakespeare
     * փոփոխել/լրացնել հրամանը, այնպես որ այդ տողերի փոխարեն, ստանանք դրանց քանակը 
 
 
+### STDIN
 
+STDIN - Standard input 			< 
+```bash
+sort -r < ~/stdout
+```
+
+```bash
+sort -r < ~/stdout > ~/stdouts
+```
+
+```bash
+wc -l < /etc/services
+```
 
 
 <hr>
