@@ -1082,22 +1082,13 @@ Linux I/O Redirection
 └──────────┘       └──────────┘    
 </pre>
 
-  * STDIN (FD0)  — input from keyboard  (`<`)
-  * STDOUT (FD1) — normal output  (`>` `1>`)
-  * STDERR (FD2) — error messages (`2>`)
-
-
-* Redirect Only Standard Error (`2>`)
-
-<pre>
-┌──────────┐       ┌─────────┐          ┌────────┐
-│          │ STDIN │         │ STDOUT > │ Screen │
-│ Keyboard │ ----> │ Process │ ----->   │        │
-│          │       │         │          └────────┘
-└──────────┘       └─────────┘          ┌────────┐
-                    └─ STDERR ----> 2>  │  FILE  │
-                                        └────────┘
-</pre>
+- STDIN (FD0)  — input from keyboard  (`<`)
+- STDOUT (FD1) — normal output  (`>` `>>`)
+  - `>`  - Creates or **OVERWRITES** file
+  - `>>` - Creates or **APPENDS** to file
+- STDERR (FD2) — error messages (`2>` `2>>`)
+  - `2>`  - Creates or **OVERWRITES** file
+  - `2>>` - Creates or **APPENDS** to file
 
 
 * Redirect Only Standard Output (`>`)
@@ -1112,8 +1103,87 @@ Linux I/O Redirection
                                         └────────┘
 </pre>
 
+Օրինակներ.
 
-* Redirect Both Standard Output and Error Together (&>)
+```bash
+echo "Hi" > ~/stdout
+echo "Hi again" > ~/stdout
+echo "Hi again and again" > ~/stdout
+cat ~/stdout
+```
+
+```bash
+echo "Hi" >> ~/stdout2
+echo "Hi again" >> ~/stdout2
+echo "Hi again and again" >> ~/stdout2
+cat ~/stdout2
+```
+
+
+* Redirect Only Standard Error (`2>`)
+
+<pre>
+┌──────────┐       ┌─────────┐          ┌────────┐
+│          │ STDIN │         │ STDOUT > │ Screen │
+│ Keyboard │ ----> │ Process │ ----->   │        │
+│          │       │         │          └────────┘
+└──────────┘       └─────────┘          ┌────────┐
+                    └─ STDERR ----> 2>  │  FILE  │
+                                        └────────┘
+</pre>
+
+Օրինակներ.
+
+```bash
+ls /e > ~/stdout
+cat ~/stdout
+```
+
+```bash
+ls /a > ~/stdout 2> ~/stderr
+ls /b > ~/stdout 2> ~/stderr
+ls /c > ~/stdout 2> ~/stderr
+```
+
+```bash
+cat ~/stdout
+```
+
+```bash
+cat ~/stderr
+```
+
+> ՀԱՐՑ. Ի՞նչ կա **~/stdout** և **~/stderr** ֆայլերում և ինչու
+
+
+```bash
+ls /a > ~/stdout 2>> ~/stderr
+ls /b > ~/stdout 2>> ~/stderr
+ls /c > ~/stdout 2>> ~/stderr
+```
+
+```bash
+cat ~/stdout
+```
+
+```bash
+cat ~/stderr
+```
+
+> ՀԱՐՑ. Ի՞նչ կա **~/stdout** և **~/stderr** ֆայլերում և ինչու
+
+
+<br><br>
+**/dev/null** - "black hole" (դեն է նետում իրեն ուղարկված ամեն ինչ)
+
+
+```bash
+ls /e > ~/stdout 2> /dev/null
+cat ~/stdout
+```
+
+
+* Redirect Both Standard Output and Error Together (`&>`)
 
 <pre>
 ┌──────────┐       ┌─────────┐        ┌────────┐
@@ -1121,35 +1191,27 @@ Linux I/O Redirection
 │ Keyboard │ ----> │ Process │        │        │
 │          │       │         │        └────────┘
 └──────────┘       └─────────┘        ┌────────┐
-                    └─ STDOUT >  ---->│  FILE  │
-                    └─ STDERR 2> ---->│        │
-                                      └────────┘
+                    └─ STDOUT ---> &> │  FILE  │
+                    └─ STDERR --->    └────────┘ 
 </pre>
 
 
+Օրինակներ.
 
+```bash
+ls /home /ho &> ~/stdall
+cat ~/stdall
+```
 
-<img src=https://github.com/trainart/linux1/blob/main/img/io-redir-1.jpg  width=70% height=70% >
-<br><br>
-<img src=https://github.com/trainart/linux1/blob/main/img/io-redir-2.jpg  width=70% height=70% >
-<br><br>
+```bash
+ls /home /ho &> /dev/null 
+```
 
-
-> STDOUT - Standard output  		>     >> 
- 
-* `ls /etc > ~/stdout`
-* `ls /etc >> ~/stdout`
-
-> STDERR - Standard error output		2>   2>> 
-* `ls /e > ~/stdout`
-* `ls /e > ~/stdout 2> ~/stderr`
-* `ls /e > ~/stdout 2> /dev/null`
-
-<hr>
 
 ## Pipes
 
 Pipeline - Մեկ հրամանի STDOUT-ը ուղարկել այլ հրամանի STDIN-ին
+
 <img src=https://github.com/trainart/linux1/blob/main/img/pipes-1.jpg  width=70% height=70% >
 <br><br>
 
