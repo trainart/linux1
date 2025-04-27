@@ -1070,6 +1070,35 @@ cat /etc/passwd | awk -F":" '/nologin$/ {print $1"-"$5}'
 
 ## I/O Redirection
 
+Linux I/O Redirection
+
+
+* Normal I/O
+┌──────────┐       ┌──────────┐       ┌──────────┐
+│ Keyboard │  -->  │ Program  │  -->  │  Screen  │
+└──────────┘ stdin └──────────┘ stdout└──────────┘
+                                    └─ stderr ──────▶ Screen
+
+  * stdin (0)  — input from keyboard
+
+  * stdout (1) — normal output
+
+  * stderr (2) — error messages
+
+
+
+* Redirect Only Standard Output (`>`)
+
+┌──────────┐       ┌──────────┐       ┌────────┐
+│ Keyboard │  -->  │ Program  │  -->  │  File  │
+└──────────┘ stdin └──────────┘ stdout└────────┘
+                                    └─ stderr ──────▶ Screen
+
+
+
+
+
+
 <img src=https://github.com/trainart/linux1/blob/main/img/io-redir-1.jpg  width=70% height=70% >
 <br><br>
 <img src=https://github.com/trainart/linux1/blob/main/img/io-redir-2.jpg  width=70% height=70% >
