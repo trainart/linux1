@@ -753,7 +753,7 @@ ls -l /etc/ssl
 <hr>
 
 #### Example: relative path symlink
-* Օրինակ. ՀԱՐԱԲԵՐԱԿԱՆ ճանախարհով հղում
+* Օրինակ. ՀԱՐԱԲԵՐԱԿԱՆ ճանապարհով հղում
 
 Ստեղծեք `~/linkdemo` դիրեկտորիա և դրանում `origfile` ֆայլ 
 
@@ -793,7 +793,7 @@ ls -la  /tmp/other_link_dir/link_rel
 <hr>
 
 #### Example: absolute path symlink
-* Օրինակ. ԱՄԲՈՂՋԱԿԱՆ ճանախարհով հղում
+* Օրինակ. ԱՄԲՈՂՋԱԿԱՆ ճանապարհով հղում
 
 Ստեղծեք `origfile2` ֆայլ 
 
@@ -861,9 +861,9 @@ ls -l ~/symlink2linkdemo
 
 
 
-✅ ՀԱՐԱԲԵՐԱԿԱՆ ճանախարհով սիմվոլիկ հղումները ավելի կարճ են և փոխադրելի, բայց ճչեն գորցի, եթե հղումը տեղափոխվում է։
+✅ ՀԱՐԱԲԵՐԱԿԱՆ ճանապարհով սիմվոլիկ հղումները ավելի կարճ են և փոխադրելի, բայց չեն գորցի, եթե հղումը տեղափոխվի։
 
-✅ ԱՄԲՈՂՋԱԿԱՆ ճանախարհով սիմվոլիկ հղումմները միշտ գործում են, քանի դեռ օրիգիինալ ֆայլը մնում է տեղում:
+✅ ԱՄԲՈՂՋԱԿԱՆ ճանապարհով սիմվոլիկ հղումմները միշտ գործում են, քանի դեռ օրիգիինալ ֆայլը մնում է տեղում:
 
 
 ## Access to files (view,parse)
@@ -940,9 +940,9 @@ ls -l ~/symlink2linkdemo
 
 <hr>
 
-### grep
+### grep - filter lines based on pattern
 
-> **grep** - filter lines based on pattern
+> **grep** - Ֆիլտրել նմուշին համապատասխանող տողերը - **հորիզոնական** ֆիլտրում
 
 > Օրինակներ
  
@@ -998,9 +998,9 @@ cut -f1,3 -d":" /etc/passwd
 
 <hr>
 
-## Advanced Text Processing - AWK 
+## Advanced Text Processing - AWK - extract sections/fields from each line of files
 
-> **AWK**  - extract sections/fields from each line of files
+> **AWK**  - յուրաքանչյուր տողից հանել նմուշին համապատասխանող հատվածներ - **ուղղահայաց** ֆիլտրում
 
 Examples
 
@@ -1020,8 +1020,8 @@ cat /etc/passwd | grep -E ^'(b|sy)' | awk -F":" '{print "User: "$3"  "$1}'
 cat /etc/passwd | awk -F":" '/nologin$/ {print $1"-"$5}'
 ```
 
-### Task:
-Modify the above command, to narrow selection by only lines starting with s  
+### Task
+Փոփոխեք վերը նշված հրամանը՝ միայն `s` տառով սկսվող տողերը ընտրելու համար։
 
 <hr>
 
