@@ -889,8 +889,13 @@ ls -l ~/symlink2linkdemo
 
 > Օրինակներ
  
-`less /etc/services`
-`ls /usr/bin | sort -r | less`
+```bash
+less /etc/services
+```
+
+```bash
+ls /usr/bin | sort -r | less`
+```
 
 <hr>
 
@@ -899,12 +904,18 @@ ls -l ~/symlink2linkdemo
 > **cat** - output whole file to STDOUT (default - terminal)
 
 > Օրինակներ
- 
-`cat /etc/services`
 
-`cat /etc/services | sort -r `
+```bash
+cat /etc/services
+```
 
-`cat /etc/services | sort -r | less`
+```bash
+cat /etc/services | sort -r
+```
+
+```bash
+cat /etc/services | sort -r | less
+```
 
 <hr>
 
@@ -914,13 +925,21 @@ ls -l ~/symlink2linkdemo
 
 > Օրինակներ
  
-`head /etc/services`
+```bash
+head /etc/services
+```
 
-`head -1 /etc/services`
+```bash
+head -1 /etc/services
+```
 
-`head -1 /etc/services > /tmp/h1`
+```bash
+head -1 /etc/services > /tmp/h1
+```
 
-`head -1 /etc/services >> /tmp/h1`
+```bash
+head -1 /etc/services >> /tmp/h1
+```
  
 <hr>
 
@@ -930,13 +949,21 @@ ls -l ~/symlink2linkdemo
 
 > Օրինակներ
  
-`tail /etc/services`
+```bash
+tail /etc/services
+```
 
-`tail -1 /etc/services`
+```bash
+tail -1 /etc/services
+```
 
-`tail -1 /etc/services > /tmp/s1`
+```bash
+tail -1 /etc/services > /tmp/s1
+```
 
-`tail -1 /etc/services >> /tmp/s1`
+```bash
+tail -1 /etc/services >> /tmp/s1
+```
 
 <hr>
 
@@ -946,17 +973,27 @@ ls -l ~/symlink2linkdemo
 
 > Օրինակներ
  
-`cat /etc/services | grep http `
+```bash
+cat /etc/services | grep http
+```
 
-`ls /usr/bin | grep log`
+```bash
+ls /usr/bin | grep log
+```
 
-`ls /usr/bin | grep ^log`
+```bash
+ls /usr/bin | grep ^log
+```
 
-`ls /usr/bin | grep log$`
+```bash
+ls /usr/bin | grep log$
+```
 
 Նախորդ հրամանների պատմության մեջ որոնում
 
-՝history | grep ls՝
+```bash
+history | grep ls
+```
 
 
 #### Regular expressions 
@@ -978,9 +1015,13 @@ ls -l ~/symlink2linkdemo
 
 > Օրինակներ
  
-`wc -l /etc/passwd`
+```bash
+wc -l /etc/passwd
+```
 
-`wc  -l < /etc/group`
+```bash
+wc  -l < /etc/group
+```
 
 > **cut** - extract sections/fields from each line (of files)
 
