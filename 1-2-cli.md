@@ -1076,8 +1076,8 @@ Linux I/O Redirection
 * Normal I/O
 <pre>
 ┌──────────┐       ┌──────────┐  STDOUT   ┌──────────┐
-│          │ STDIN │          │   ───▶    │  Screen  │
-│ Keyboard │  ───▶ │  Process │   ───▶    │          │
+│          │ STDIN │          │  ---->  > │  Screen  │
+│ Keyboard │ ----> │  Process │  ----> 2> │          │
 │          │       │          │  STDERR   └──────────┘
 └──────────┘       └──────────┘    
 </pre>
@@ -1090,26 +1090,26 @@ Linux I/O Redirection
 * Redirect Only Standard Error (`2>`)
 
 <pre>
-┌──────────┐       ┌─────────┐        ┌────────┐
-│          │ STDIN │         │ STDOUT │ Screen │
-│ Keyboard │ ----> │ Process │ -----> │        │
-│          │       │         │        └────────┘
-└──────────┘       └─────────┘        ┌────────┐
-                    └─ STDERR 2> ---->│  FILE  │
-                                      └────────┘
+┌──────────┐       ┌─────────┐          ┌────────┐
+│          │ STDIN │         │ STDOUT > │ Screen │
+│ Keyboard │ ----> │ Process │ ----->   │        │
+│          │       │         │          └────────┘
+└──────────┘       └─────────┘          ┌────────┐
+                    └─ STDERR ----> 2>  │  FILE  │
+                                        └────────┘
 </pre>
 
 
 * Redirect Only Standard Output (`>`)
 
 <pre>
-┌──────────┐       ┌─────────┐         ┌────────┐
-│          │ STDIN │         │ STDERR  │ Screen │
-│ Keyboard │ ────▶ │ Process │ 2> ────▶│        │
-│          │       │         │         └────────┘
-└──────────┘       └─────────┘        ┌────────┐
-                    └─ STDOUT >  ────▶│  FILE  │
-                                      └────────┘
+┌──────────┐       ┌─────────┐           ┌────────┐
+│          │ STDIN │         │ STDERR 2> │ Screen │
+│ Keyboard │ ----> │ Process │ ----->    │        │
+│          │       │         │           └────────┘
+└──────────┘       └─────────┘          ┌────────┐
+                    └─ STDOUT ---->   > │  FILE  │
+                                        └────────┘
 </pre>
 
 
@@ -1118,11 +1118,11 @@ Linux I/O Redirection
 <pre>
 ┌──────────┐       ┌─────────┐        ┌────────┐
 │          │ STDIN │         │        │        │
-│ Keyboard │  -->  │ Process │        │        │
+│ Keyboard │ ----> │ Process │        │        │
 │          │       │         │        └────────┘
 └──────────┘       └─────────┘        ┌────────┐
-                    └─ STDOUT >  ────▶│  FILE  │
-                    └─ STDERR 2> ────▶│        │
+                    └─ STDOUT >  ---->│  FILE  │
+                    └─ STDERR 2> ---->│        │
                                       └────────┘
 </pre>
 
