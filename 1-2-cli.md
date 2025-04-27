@@ -1074,11 +1074,12 @@ Linux I/O Redirection
 
 
 * Normal I/O
+<pre>
 ┌──────────┐       ┌──────────┐       ┌──────────┐
 │ Keyboard │  -->  │ Program  │  -->  │  Screen  │
 └──────────┘ stdin └──────────┘ stdout└──────────┘
                                     └─ stderr ──────▶ Screen
-
+</pre>
   * stdin (0)  — input from keyboard
 
   * stdout (1) — normal output
@@ -1089,11 +1090,12 @@ Linux I/O Redirection
 
 * Redirect Only Standard Output (`>`)
 
+<pre>
 ┌──────────┐       ┌──────────┐       ┌────────┐
 │ Keyboard │  -->  │ Program  │  -->  │  File  │
 └──────────┘ stdin └──────────┘ stdout└────────┘
                                     └─ stderr ──────▶ Screen
-
+</pre>
 
 
 
