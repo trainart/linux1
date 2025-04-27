@@ -1256,7 +1256,8 @@ yes $'To be\nor not\nto be\nthat is the\nquestion\n' | head -30 > shakespeare
 
 ### STDIN
 
-STDIN - Standard input 			< 
+STDIN - Standard input 		  < 
+
 ```bash
 sort -r < ~/stdout
 ```
