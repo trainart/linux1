@@ -1263,7 +1263,33 @@ yes $'To be\nor not\nto be\nthat is the\nquestion\n' | head -30 > shakespeare
 
 Pipeline - Մեկ հրամանի STDOUT-ը ուղարկել այլ հրամանի STDIN-ին
 
-<img src=https://github.com/trainart/linux1/blob/main/img/pipes-1.jpg  width=70% height=70% >
+<pre>
+┌──────────────────────────┬───────────────────────────┐
+│        PIPE    |         │     REDIRECTION    >      │
+├──────────────────────────┼───────────────────────────┤
+│        Connects          │         Connects          │
+│    commands/processes    │  command/process to file  │
+│   ┌──────┐    ┌──────┐   │     ┌──────┐              │
+│   │Proc.1├--->│Proc.2│   │     │Proc.1├---> FILE     │
+│   └──────┘    └──────┘   │     └──────┘              │
+│                          │                           │
+│    STDOUT ---> STDIN     │      STDOUT ---> FILE     │
+└──────────────────────────┴───────────────────────────┘
+</pre>
+
+<br><br>
+
+<pre>
+
+┌────────┐STDOUT┌────────┐STDOUT┌────────┐STDOUT┌────────┐
+│ Proc.1 │----->│ Proc.2 │----->│ Proc.3 │----->│        │
+└────┬───┘      └───┬────┘      └───┬────┘      │        │
+     │              │               └STDERR---->│ Screen │    
+     │              └STDERR-------------------->│        │ 
+     └STDERR----------------------------------->│        │
+                                                └────────┘
+</pre>
+
 <br><br>
 
 > Օրինակ
