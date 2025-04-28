@@ -673,7 +673,22 @@ LIST="/usr/bin/" ; ls -l $LIST
 
 ### File Permissions
 
-<img src=https://github.com/trainart/linux1/blob/main/img/permissions.png  width=70% height=70% >
+<pre>
+- rwx r-x r--  1 student student   size date filename
+│└─┬─┴─┬─┴─┬─┘     │        │        
+│  │   │   │       │        └── Group
+│  │   │   │       └─── Owner
+│  │   │   └── Others (r--) - թույլտվություններ մյուսների համար  
+│  │   └── Group (r-x) - թույլտվություններ խմբի անդամների համար
+│  └── Owner (rwx) - թույլտվություններ տիրոջ համար
+└── File type 
+</pre>
+
+- File type
+  **-** 	ֆայլ  
+  **d** 	դիրեկտորիա, 
+  **l** 	սիմվոլիկ հղում (shortcut)
+
 <br><br>
 <img src=https://github.com/trainart/linux1/blob/main/img/permissions2.png  width=70% height=70% >
 <br><br>
