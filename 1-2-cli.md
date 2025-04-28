@@ -710,6 +710,7 @@ LIST="/usr/bin/" ; ls -l $LIST
 > որոնց մեջ նա հաջորդաբար գտնվում է ունեն **w** թույլտվությունը: 
 
 
+
 #### PRACTICE
 
 Create file `f1.txt`
@@ -718,7 +719,7 @@ Set permissions to `rw-r-----` using octal notation
 
 Check: `stat -c "%a %n" file2` should show "640"
 
-
+<hr>
 
 ### Midnight Commander
 
