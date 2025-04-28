@@ -1416,9 +1416,7 @@ to open `vi` with new file `testfile1`
 
 <hr>
 
-## su, sudo
-
-* Switching Users - **SU**
+## SU - Switch Users
 
 **su** - Switch user accounts (change UID). 
 
@@ -1437,7 +1435,7 @@ su -
 id 
 ```
 
-* Switching Users - **SUDO**
+## SUDO - Run single command as another user
 
 **sudo** - Run single command as another user. 
 
@@ -1456,6 +1454,12 @@ sudo su -
 id
 sudo su -
 id 
+```
+
+Կարելի է կատարել նաև առանձին հրաման
+
+```bash
+sudo id
 ```
 
 
