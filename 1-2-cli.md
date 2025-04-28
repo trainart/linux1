@@ -684,10 +684,10 @@ LIST="/usr/bin/" ; ls -l $LIST
 └── File type 
 </pre>
 
-- File type
-  **-** 	ֆայլ  
-  **d** 	դիրեկտորիա, 
-  **l** 	սիմվոլիկ հղում (shortcut)
+- File type <br>
+  **-** 	ֆայլ <br>
+  **d** 	դիրեկտորիա <br> 
+  **l** 	սիմվոլիկ հղում (shortcut) <br>
 
 <br><br>
 <img src=https://github.com/trainart/linux1/blob/main/img/permissions2.png  width=70% height=70% >
