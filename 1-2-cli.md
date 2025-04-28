@@ -713,7 +713,9 @@ LIST="/usr/bin/" ; ls -l $LIST
 #### PRACTICE
 
 Create file `f1.txt`
+
 Set permissions to `rw-r-----` using octal notation
+
 Check: `stat -c "%a %n" file2` should show "640"
 
 
