@@ -983,14 +983,6 @@ cat /etc/services | grep http
 ls /usr/bin | grep log
 ```
 
-```bash
-ls /usr/bin | grep ^log
-```
-
-```bash
-ls /usr/bin | grep log$
-```
-
 Նախորդ հրամանների պատմության մեջ որոնում
 
 ```bash
@@ -1008,6 +1000,32 @@ history | grep ls
 * \	- treat next symbol as a literal character. 
   * \\$ means $ (dollar sign)
   * \\\\$ means \ (backslash) at the end of line
+
+
+Հրամանի կատարման արդյունքի ֆիլտրում
+
+```bash
+ls /usr/bin | grep ^log
+```
+
+```bash
+ls /usr/bin | grep log$
+```
+
+```bash
+ls /usr/sbin | grep ^a.*s$
+```
+
+Ֆայլի միջից տողերի ֆիլտրում
+
+```bash
+cat /etc/services | grep ^http.*80
+```
+
+```bash
+cat /etc/passwd | grep -E ^'(b|sy)' 
+```
+
 
 <hr>
 
@@ -1038,33 +1056,6 @@ Select 1-st and 3-rd fields from /etc/passwd  separated by “:”
 ```bash
 cut -f1,3 -d":" /etc/passwd
 ```
-
-<hr>
-
-## Advanced Text Processing - AWK - extract sections/fields from each line of files
-
-> **AWK**  - յուրաքանչյուր տողից հանել նմուշին համապատասխանող հատվածներ - **ուղղահայաց** ֆիլտրում
-
-Examples
-
-```bash
-awk -F":" '{print $1}' /etc/passwd | grep ^s
-```
-
-```bash
-tail -10 /etc/passwd | awk -F":" '{print $3"--"$1}' | sort -n
-```
-
-```bash
-cat /etc/passwd | grep -E ^'(b|sy)' | awk -F":" '{print "User: "$3"  "$1}'
-```
-
-```bash
-cat /etc/passwd | awk -F":" '/nologin$/ {print $1"-"$5}'
-```
-
-### Task
-Փոփոխեք վերը նշված հրամանը՝ միայն `s` տառով սկսվող տողերը ընտրելու համար։
 
 <hr>
 
@@ -1427,10 +1418,46 @@ to open `vi` with new file `testfile1`
 
 ## su, sudo
 
-![img.png](img/su.png)
-<br><br>
-![img.png](img/sudo.png)
-<br><br>
+* Switching Users - **SU**
+
+**su** - Switch user accounts (change UID). 
+
+su հրամանը թույլ է տալիս օգտագործողին մուտք գործել որպես այլ օգտագործող (օրինակ՝ **root**), մուտքագրելով **տվյալ օգտագործողի** գաղտնաբառը:
+Քանի որ ադրդյունքում ստեղծվում է նոր ենթա-սեսիա, աավարտելիս պետք է հավաքել `exit`, նախորդ սեսիային վերադառնալու համար:
+
+**su - [ <username> ]** 
+
+> Նկատի ունենեցեք՝ **root**-ը որևէ գաղտնաբառ մուտքագրելու կարիք չունի, մեկ այլ օգտագործեղի անունից աշխատելու համար: 
+
+Օրինակներ
+
+```bash
+id
+su -
+id 
+```
+
+* Switching Users - **SUDO**
+
+**sudo** - Run single command as another user. 
+
+sudo հրամանը թույլ է տալիս օգտագործողին root-ի «անունից» կոնկրետ հրաման կատարել մուտքագրելով **իր գաղտնաբառը**:
+(օգտագործողին դա նախապես պետք է թայլատրված լինի)
+
+Կարելի է որպես հրաման նշելով `su -`, դառնալ root մուտքագրելով ոչ թե root գաղտնաբառը, այլ ձեր սեփական գաղտնաբառը:
+Քանի որ այս դեպքում էլ ստեղծվում է նոր ենթա-սեսիա, աավարտելիս պետք է հավաքել `exit`, նախորդ սեսիային վերադառնալու համար:
+
+```bash
+sudo su -  
+```
+
+Օրինակներ
+```bash
+id
+sudo su -
+id 
+```
+
 
 ## Chown
 
