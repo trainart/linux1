@@ -699,6 +699,17 @@ LIST="/usr/bin/" ; ls -l $LIST
 <img src=https://github.com/trainart/linux1/blob/main/img/chmod.png  width=70% height=70% >
 <br><br>
 
+> ԿԱՐԵՎԵՐ է ԻՄԱՆԱԼ
+> Որևէ ֆայլը **հասանելի է** եթե բոլոր դիրեկտորիաները, որոնց մեջ նա հաջորդաբար գտնվում է ունեն **x** թույլտվությունը:
+
+<br>
+
+> ԿԱՐԵՎԵՐ է ԻՄԱՆԱԼ 
+> Որևէ ֆայլը **փոփոխելու համար** բավական է ունենալ այդ ֆայլի **w** թույլտվությունը:<br>
+> Կարիք չկա, որ բոլոր դիրեկտորիաները, 
+> որոնց մեջ նա հաջորդաբար գտնվում է ունեն **w** թույլտվությունը: 
+
+
 ### Midnight Commander
 
 <img src=https://github.com/trainart/linux1/blob/main/img/mc.png  width=70% height=70% >
