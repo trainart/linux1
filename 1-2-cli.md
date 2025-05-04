@@ -209,7 +209,7 @@ cal-m 2025
 
 Հրամանների օրինակներ
 
-* echo - display a line of text 
+* **echo** - display a line of text 
 ```bash
 echo We learn Linux # this is a comment 
 ```
@@ -224,14 +224,14 @@ echo "$USER" learns Linux OS
 echo My Shell is: "$SHELL"
 ```
 
-* sleep - delay for a specified time 
+* **sleep** - delay for a specified time 
 
 ```bash
 echo ; echo -n "Be patient " ; sleep 2 ; echo -n "to learn " ; sleep 2 ; echo "LINUX Operating System" ; sleep 2 ; echo 
 
 ```
 
-* id - display user information
+* **id** - display user information
 
 ```bash
 id
@@ -243,7 +243,7 @@ id --help
 id -n -u
 ```
 
-* date - display date
+* **date** - display date
 
 ```bash
 date
