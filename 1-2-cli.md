@@ -78,16 +78,6 @@ systemctl isolate graphical.target
 systemctl isolate multi-user.target
 ```
 
-Հատուկ այս դասի համար ունենք կարճ այլընտրանքային հրամաններ 
-
-```bash
-turn-gui
-```
-
-```bash
-turn-txt
-```
-
 
 ## Linux Terminal, CLI Basics
 
@@ -152,8 +142,8 @@ CLI / Shell / Bash աշխատում է ինտերակտիվ եղանակով, ո
 
 #### Movement in command line
 
-Աջ/ձախ սլաքներից բացի հրամանային տողում տեղաշարժ
-
+Տեղաշարժ հրամանային տողում. 
+*  **Աջ/ձախ սլաքներ**
 * `Ctrl-A` – տեղափոխել տողի սկիզբ
 * `Ctrl-E` – տեղափոխել տողի վերջ
 
