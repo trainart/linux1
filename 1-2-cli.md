@@ -366,31 +366,32 @@ man date
 🌳 C:\ (System Drive)
 ├── 📁 Windows           # OS core files
 │   ├── 📁 System32      # Critical system binaries
-│   ├── 📁 Temp          # Temporary files
-│   └── 📄 Registry      # Virtual registry files
+│   └── 📁 Temp          # Temporary files
 ├── 📁 Program Files     # 64-bit applications
-│   ├── 📁 Microsoft
-│   └── 📁 Common Files
 ├── 📁 Program Files (x86) # 32-bit applications
-├── 📁 Users            # User profiles
-│   ├── 📁 User         # User documents
-│   │   ├── 📁 Desktop
-│   │   ├── 📁 Documents
-│   │   └── 📁 AppData   # Hidden app data
-│   └── 📁 Public        # Shared files
-├── 📁 ProgramData       # System-wide app data (hidden)
-└── 📁 PerfLogs          # Performance logs
+└── 📁 Users            # User profiles
+    └── 📁 User         # User documents
+        ├── 📁 Desktop
+        └── 📁 Documents
 
-🌳 D:\ (Common Data Drive)
+🌳 D:\ (User Data)
 ├── 📁 Projects
 ├── 📁 Media
 │   ├── 📁 Music
 │   └── 📁 Videos
 └── 📁 Backups
 
-🌳 E:\ (USB Drive)
-├── 📁 Photos
-└── 📁 Documents
+🌳 E:\ (Photo Archive)
+└── 📁 Photos
+
+🌳 F:\ (Video Archive)
+├── 📁 Clips
+└── 📁 Videos
+
+🌳 Z:\ (USB Stick)
+├── 📁 Pictures
+└── 📁 Images
+
 </pre>
 
 <br> <br>
@@ -435,9 +436,9 @@ man date
 ### Linux Partition Mounting (հատվածների կցում)
 
 * Partition հատվածները որպես առանձնացված տառերով դիսկեր ներկայացնելու փոխարեն, Լինուքսում կա 
-  * գլխավոր հատված՝ **root partition**
-  * մյուս հատվածները կցվում են (mount) գլխավորի որևէ կետին - դիրեկտորիային
-* Յուրաքանչյուր Partition հատվածում տվյալներ պահպանելու համար այն պետք է ունենա որոշակի ստանդարտի ֆայլային համակարգ /format-արած լինի այդ ստանդարտով/:
+  * գլխավոր հատված՝ **Root partition**
+  * մյուս հատվածները կցվում են (**mount**) գլխավորի որևէ կետին - դիրեկտորիային
+* Յուրաքանչյուր Partition հատվածում տվյալներ պահպանելու համար այն պետք է ունենա որոշակի ստանդարտի ֆայլային համակարգ (format-արած լինի այդ ստանդարտով):
 
 
 Windows example
@@ -453,7 +454,7 @@ Windows example
 │   └── Partition 1 (1TB,ntfs)   → F:\   Video Archive
 │
 └── USB Stick (32GB)
-    └── Partition 1 (32GB,vfat)  → H:\   Image Archive
+    └── Partition 1 (32GB,vfat)  → Z:\   Image Archive
 </pre>
 
 
