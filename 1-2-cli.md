@@ -197,17 +197,31 @@ cal-m 2025
 4. **Արգումենտները** (**Arguments**) տվյալներ են տրամադրում (**2025** = տարի, **/home/student** = դիրեկտորիա)
 
 
-
-
 <pre>
 [հրաման] [աշխատաձև] [մուտքի տվյալներ]
    cal      -m          2025
 </pre>
 
 
+
 ### Command examples
 
 Հրամանների օրինակներ
+
+* **cal** - display calendar 
+
+```bash
+cal
+```
+
+```bash
+cal 2025
+```
+
+```bash
+cal -m 2025
+```
+
 
 * **echo** - display a line of text 
 ```bash
@@ -236,11 +250,13 @@ echo ; echo -n "Be patient " ; sleep 2 ; echo -n "to learn " ; sleep 2 ; echo "L
 ```bash
 id
 ```
-```bash
-id --help
-```
+
 ```bash
 id -n -u
+```
+
+```bash
+id --help
 ```
 
 * **date** - display date
@@ -248,9 +264,11 @@ id -n -u
 ```bash
 date
 ```
+
 ```bash
 date --help
 ```
+
 ```bash
 date +"%d-%m-%Y"
 ```
@@ -345,6 +363,39 @@ man date
 ### Linux Filesystem Hierarchy Standard (FHS)
 
 <pre>
+🌳 C:\ (System Drive)
+├── 📁 Windows           # OS core files
+│   ├── 📁 System32      # Critical system binaries
+│   ├── 📁 Temp          # Temporary files
+│   └── 📄 Registry      # Virtual registry files
+├── 📁 Program Files     # 64-bit applications
+│   ├── 📁 Microsoft
+│   └── 📁 Common Files
+├── 📁 Program Files (x86) # 32-bit applications
+├── 📁 Users            # User profiles
+│   ├── 📁 User         # User documents
+│   │   ├── 📁 Desktop
+│   │   ├── 📁 Documents
+│   │   └── 📁 AppData   # Hidden app data
+│   └── 📁 Public        # Shared files
+├── 📁 ProgramData       # System-wide app data (hidden)
+└── 📁 PerfLogs          # Performance logs
+
+🌳 D:\ (Common Data Drive)
+├── 📁 Projects
+├── 📁 Media
+│   ├── 📁 Music
+│   └── 📁 Videos
+└── 📁 Backups
+
+🌳 E:\ (USB Drive)
+├── 📁 Photos
+└── 📁 Documents
+</pre>
+
+<br> <br>
+
+<pre>
 🌳 /
 ├── 📁 bin                 # Essential user command binaries
 ├── 📁 boot                # Boot loader files (kernel, initramfs)
@@ -379,38 +430,7 @@ man date
     └── 📁 lib             # Dynamic libraries
 </pre>
 
-<br> <br>
 
-<pre>
-🌳 C:\ (System Drive)
-├── 📁 Windows           # OS core files
-│   ├── 📁 System32      # Critical system binaries
-│   ├── 📁 Temp          # Temporary files
-│   └── 📄 Registry      # Virtual registry files
-├── 📁 Program Files     # 64-bit applications
-│   ├── 📁 Microsoft
-│   └── 📁 Common Files
-├── 📁 Program Files (x86) # 32-bit applications
-├── 📁 Users            # User profiles
-│   ├── 📁 User         # User documents
-│   │   ├── 📁 Desktop
-│   │   ├── 📁 Documents
-│   │   └── 📁 AppData   # Hidden app data
-│   └── 📁 Public        # Shared files
-├── 📁 ProgramData       # System-wide app data (hidden)
-└── 📁 PerfLogs          # Performance logs
-
-🌳 D:\ (Common Data Drive)
-├── 📁 Projects
-├── 📁 Media
-│   ├── 📁 Music
-│   └── 📁 Videos
-└── 📁 Backups
-
-🌳 E:\ (USB Drive)
-├── 📁 Photos
-└── 📁 Documents
-</pre>
 
 ### Linux Partition Mounting (հատվածների կցում)
 
@@ -419,57 +439,62 @@ man date
   * մյուս հատվածները կցվում են (mount) գլխավորի որևէ կետին - դիրեկտորիային
 * Յուրաքանչյուր Partition հատվածում տվյալներ պահպանելու համար այն պետք է ունենա որոշակի ստանդարտի ֆայլային համակարգ /format-արած լինի այդ ստանդարտով/:
 
+
+Windows example
+
 <pre>
-🖴 SSD (500GB)
-├── C:\ (200GB) → Windows OS
-├── D:\ (200GB) → User Data
-└── [Unallocated 100GB] → Future use
+🖴 Physical Storage Devices
+├── Disk 1 (500GB)
+│   ├── Partition 1 (200GB,ntfs) → C:\   Windows OS
+│   ├── Partition 2 (150GB,ntfs) → D:\   User Data
+│   └── Partition 3 (50GB,ntfs)  → E:\   Photo Archive
+│
+├── Disk 2 (1TB)  
+│   └── Partition 1 (1TB,ntfs)   → F:\   Video Archive
+│
+└── USB Stick (32GB)
+    └── Partition 1 (32GB,vfat)  → H:\   Image Archive
 </pre>
 
-<pre>
-🖴 SSD (500GB)
-├── / (200GB)     → Linux OS
-├── /home (150GB) → User files
-├── /tmp  (50GB)  → Temporary files
-└── [Unallocated 100GB] → Future use
-</pre>
 
-<br> <br>
+Linux example
 
 <pre>
-🌳 /             # Root Filesystem - Disk 1,Partition 1
-├── 📁 bin       
-│   └── ls
-├── 📁 etc       
-├── 📁 home      # Mounted from Disk 1, Partition 2
-│   └── 📁 student
-│       └── userinfo.txt 
-├── 📁 tmp       # Mounted from Disk 1, Partition 3
-│   └── tmpfile
-├── 📁 usr       # Mounted from Disk 2 (entire disk)
-│   ├── 📁 bin   
-│   └── 📁 lib   
-│       └── systemlib
-└── 📁 media
-    └── 📁 usb   # Auto-mounted USB stick (vfat)
-        └── 📁 docs
-            └── info.doc
-
+🖴 Physical Storage Devices
+├── Disk 1 (500GB)
+│   ├── Partition 1 (200GB,ext4) → / (Root Filesystem)
+│   ├── Partition 2 (150GB,ext4) → /home
+│   └── Partition 3 (50GB,ext4)  → /tmp
+│
+├── Disk 2 (1TB)  
+│   └── Partition 1 (1TB,xfs)   → /usr
+│
+└── USB Stick (32GB)
+    └── Partition 1 (32GB,vfat)  → /media/usb
 </pre>
 
 <br><br>
 
 <pre>
-🖴 Physical Storage Devices:
-├── Disk 1 (SSD 500GB)
-│   ├── Partition 1 (50GB ext4) → / (root)
-│   ├── Partition 2 (400GB ext4) → /home
-│   └── Partition 3 (50GB ext4) → /tmp
-│
-├── Disk 2 (HDD 1TB) → Entire disk as /usr (ext4)
-│
-└── USB Stick (32GB vfat) → Auto-mounted at /media/usb
+🌳 /            → Root Filesystem - Disk 1,Partition 1 (ext4)
+├── 📁 bin       
+│   └── ls
+├── 📁 etc       
+├── 📁 home     → mounted from Disk 1,Partition 2 (ext4)
+│   └── 📁 student
+│       └── userinfo.txt 
+├── 📁 tmp      → mounted from Disk 1,Partition 3 (ext4)
+│   └── tmpfile
+├── 📁 usr      → mounted from Disk 2,Partition 1 (xfs) 
+│   ├── 📁 bin   
+│   └── 📁 lib   
+│       └── systemlib
+└── 📁 media
+    └── 📁 usb  → mounted from USB stick,Partition 1 (vfat)
+        └── 📁 docs
+            └── info.doc
 </pre>
+
 
 <br><br>
 
