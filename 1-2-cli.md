@@ -32,7 +32,7 @@ SSH-ով միանալու պարագայում գաղտնաբառի փոխարե
 ### Remote login
 * Նկատեք `IP address`-ը:
 * Windows-ում բացեք հրամանների միջավայրը (`cmd`)
-* միացեք SSH-ով ՝student՝ անունով ու IP-հասցեյով (password - `123456`)
+* միացեք SSH-ով `student` անունով ու IP-հասցեյով (password - `123456`)
 
 `ssh student@<ip-address>`
 
