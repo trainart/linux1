@@ -468,7 +468,7 @@ Linux example
 │   └── Partition 3 (50GB,ext4)  → /tmp
 │
 ├── Disk 2 (1TB)  
-│   └── Partition 1 (1TB,xfs)   → /usr
+│   └── Partition 1 (1TB,xfs)    → /usr
 │
 └── USB Stick (32GB)
     └── Partition 1 (32GB,vfat)  → /media/usb
@@ -499,7 +499,7 @@ Linux example
 
 <br><br>
 
-* Որտեղ (որ partition-ում) է ֆիզիկապես գտնվում հետևյալ ֆայլը.
+* Որտե՞ղ (ո՞ր partition-ում) է ֆիզիկապես գտնվում հետևյալ ֆայլը.
   * `/bin/ls`
   * `/home/student/userinfo.txt`
   * `/tmp/tmpfile`
@@ -514,6 +514,7 @@ Linux example
 
 * Ցանկացած տեղից
   * `/home/student/userinfo.txt`
+  
 * Եթե գտնվում ենք `/home/student`-ում
   * `userinfo.txt`
   * `./userinfo.txt`
