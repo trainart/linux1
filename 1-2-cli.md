@@ -804,8 +804,8 @@ dnf -y install mc
   - **F10** կամ **Esc + O** - ելք mc-ից  
 
 * Վերևի մենյու - ֆայլի գործողություններ
-- **Esc + 9 → File → Chmod** - Փոխել ֆայլի թույլտվությունները  
-- **Esc + 9 → File → Advanced Chown** - տիրոջ/խումբը  
+  - **Esc + 9 → File → Chmod** - Փոխել ֆայլի թույլտվությունները  
+  - **Esc + 9 → File → Advanced Chown** - տիրոջ/խումբը  
 
 
 <hr>
