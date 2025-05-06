@@ -814,6 +814,13 @@ dnf -y install mc
 
 <img src=https://github.com/trainart/linux1/blob/main/img/umask.png  width=70% height=70% >
 
+
+#### PRACTICE
+
+> ❓ ՀԱՐՑ. umask-ի որ արժեքի դեպքում նորաստեղծ դիրեկտորիան կունենա `rwx --x --x`  իրավունքները:
+
+* Փոփոխեք umask-ը և ստեղծեք մի քանի ֆայլեր և դիրեկտորիաներ
+
 <hr>
 
 ### Additional Attributes
