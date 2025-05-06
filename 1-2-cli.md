@@ -1498,7 +1498,7 @@ Vim ռեժիմներ
                                      :q!  - դուրս գալ առանց պահպանելու
 </pre>
 
-> > ✅ ԿԱՐԵՎՈՐ Է<br> 
+>  ✅ ԿԱՐԵՎՈՐ Է<br> 
 > Եթե շփոթվեք, թե որ ռեժիմում եք գտնվում, պարզապես **մի քանի անգամ սեղմեք `ESC`** <br>
 > Այդպես վստահ կլինեք, որ սկզբնական **Command** ռեժիմում եք
 
@@ -1506,20 +1506,19 @@ Vim ռեժիմներ
 
 #### PRACTICE
 
-Create new file in `vi` editor
+* Ստեղծեք նոր `testfile1` ֆայլ `vi` խմբագրիչի օգնությամբ 
+  * մուտքագրեք որոշ տեքստ ֆայլում
+  * պահպանեք և դուրս եկեք
 
-* Type 
-```bash
-vi testfile1
-``` 
-to open `vi` with new file `testfile1`
-* Press the `i` key to switch to **Insert/Input** mode.
-* Type something like: <br><br> 
-`We are interested `<br>
-`to learnLinux`
-<br><br>
-* Press the `ESC` key for command mode
-* Type `ZZ` to save and quit the file
+* Կրկին բացեք այդ ֆայլը
+  * ավելացրեք որոշ տեքստ
+  * պահպանեք և դուրս եկեք
+
+* Կրկին բացեք այդ ֆայլը 
+  * ջնջեք որոշ տեքստ
+  * չեղարկեք վերջին խմբագրումը
+  * պահպանեք և դուրս եկեք
+
 
 <hr>
 
