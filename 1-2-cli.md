@@ -574,7 +574,7 @@ echo -n "Be patient " ; sleep 2 ; echo -n "to learn LINUX" ; sleep 2
 <hr> 
 
 > Հատուկ անվանումներ
-* `/`   Գլխավոր դիրեկտորիան
+* `/`    Գլխավոր դիրեկտորիան, դիրեկտորիաների միջև տարանջատիչ
 * `.`    Տվյալ դիրեկտորիան
 * `..`   Նախորդ (վերևի) դիրեկտորիան
 * `~`    Օգտագործողի անձնական դիրեկտորիան
@@ -695,18 +695,27 @@ rm -r ~/TEST
 
 Փոփոխականներ
 
-Shell/Bash variables - temporary storage for information
-Bash does not care about the type of variables. 
-Variables could store strings, characters or integers. 
+Shell/Bash փոփոխականները - ժամանակավորապես պահպանում են տեղեկատվությունը
 
-Variable names are uppercase by convention, but lowercase and other symbols can be used as well.
+Bash-ը փոփոխականների տեսակներ չունի։
 
-Syntax: **VARNAME=VALUE**
+Փոփոխականները կարող են պահել տոեքստ (string) կամ ամբողջ թվեր (integer).
 
-> ✅ Note: There should be no space around `=` sign 
+Փոփոխականների անունները պայմանականորեն ՄԵԾԱՏԱՐ են, բայց կարող են օգտագործվել նաև փոքրատառեր և այլ նշաններ:
 
-The example assigns the value `/usr/bin` to the variable called `LIST`
-Prefix the variable name with `$`, which will give the value stored in that variable.
+Կառուցվածք - **VARNAME=VALUE**
+
+> 
+> ✅ ԿԱՐԵՎԵՐ է ԻՄԱՆԱԼ <br>
+> Փոփոխականի անունը և արժեքը պետք է կպած լինեն `=` նշանին: <br>
+> Այսինքն `=` նշանի կողքերը չպետք է լինեն բացատներ (space):
+
+
+Օրինակ.
+
+Նշանակենք `LIST` փոփոխականին `/usr/bin` արժեքը
+
+Փոփոխականի դեմը գրելով `$` ստանում ենք դրա արժեքը
 
 ```bash
 LIST="/usr/bin/" ; ls -l $LIST
@@ -715,6 +724,7 @@ LIST="/usr/bin/" ; ls -l $LIST
 <br><br>
 
 ### File Permissions
+
 
 <pre>
 - rwx r-x r--  1 student student   size date filename
@@ -742,7 +752,7 @@ LIST="/usr/bin/" ; ls -l $LIST
 <img src=https://github.com/trainart/linux1/blob/main/img/chmod.png  width=70% height=70% >
 <br><br>
 
-> ԿԱՐԵՎԵՐ է ԻՄԱՆԱԼ <br>
+> ✅ ԿԱՐԵՎԵՐ է ԻՄԱՆԱԼ <br>
 > Որևէ ֆայլը **հասանելի է** եթե բոլոր դիրեկտորիաները, որոնց մեջ նա հաջորդաբար գտնվում է ունեն **x** թույլտվությունը:
 
 <br>
