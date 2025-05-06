@@ -774,10 +774,29 @@ Check: `stat -c "%a %n" file2` should show "640"
 
 <hr>
 
-### Midnight Commander
+### Midnight Commander (mc) - visual file manager
 
-<img src=https://github.com/trainart/linux1/blob/main/img/mc.png  width=70% height=70% >
-<br><br>
+* Տեղադրում
+
+```bash
+yum install mc
+```
+
+* Հիմնական Հրամաններ
+  - **TAB** - Փոխել վահանակները (ձախ/աջ)  
+  - **Esc + Enter** - Ֆայլի անունը գրել ներքևի հրամանների տողում  
+  - **Esc + A** - Ֆայլի ճանապարհը գրել ներքևի հրամանների տողում
+  - **Esc + H** - Հրամանների պատմություն (տարբերվում է Bash-ի պատմությունից)
+  - **Esc + P** - Նախորդ հրաման  
+  - **Ctrl + O** - Ցույց տալ/թաքցնել տերմինալը  
+  - **F10** կամ **Esc + O** - ելք mc-ից  
+
+* Վերևի մենյու - ֆայլի գործողություններ
+- **Esc + 9 → File → Chmod** - Փոխել ֆայլի թույլտվությունները  
+- **Esc + 9 → File → Advanced Chown** - տիրոջ/խումբը  
+
+
+<hr>
 
 ### Umask
 
