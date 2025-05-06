@@ -1416,6 +1416,21 @@ ls /usr/bin ; sort -r ; wc -l
 _( **echo $?**  - ցույց է տալիս վերջին հրամանի ելքի կոդը (exit code) 0=OK)_
 
 
+
+# Command Line Operators
+
+<pre>
+| Symbol | Description (Armenian) | Description (English) | Example |
+|--------|------------------------|------------------------|---------|
+| `;`    | Պարզապես կատարել հրամանները՝ մեկը մյուսի հետևից | Simply execute commands one after another | `command1; command2` |
+| `|`    | Փոխանցել առաջին հրամանի ելքի տվյալները (STDOUT) երկրորդ հրամանի մուտքին (STDIN) | Pipe first command's output (STDOUT) to second command's input (STDIN) | `command1 | command2` |
+| `&&`   | Logical AND եթե առաջին հրամանի ելքի կոդը (exit code) 0 է, կատարել երկրորդը | Logical AND - if first command's exit code is 0, execute the second | `command1 && command2` |
+| `||`   | Logical OR եթե առաջին հրամանի ելքի կոդը (exit code) 0 չէ, կատարել երկրորդը | Logical OR - if first command's exit code is not 0, execute the second | `command1 || command2` |
+
+</pre>
+
+
+
 > Օրինակներ
 
 * `cd /home && pwd`
