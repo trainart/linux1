@@ -1474,11 +1474,11 @@ There is also much rarely used **Visual** mode for highlight or select text for 
 
 
 <pre>
-              [Command Mode]  
-              ↙ ↗  Esc  ↖ ↘  
-           ↙ ↗            ↖ ↘  
-      i  ↙ ↗                 ↖ ↘  : 
-   [Insert/Input]             [Execute]  
+                   [Command Mode]  
+                   ↙ ↗  Esc  ↖ ↘  
+                ↙ ↗            ↖ ↘  
+           i  ↙ ↗                 ↖ ↘  : 
+   [Insert/Input Mode]         [Execute Mode]  
 </pre>
 
 
