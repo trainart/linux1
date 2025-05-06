@@ -1472,34 +1472,34 @@ _( `echo $?`  - ցույց է տալիս վերջին հրամանի ելքի կ
 
 
 > Vim ռեժիմներ
-* **Command**	- Նախնական ռեժիմ ( "**i**"-ով անցնում ես դեպի հիմնական ռեժիմ)
-* **Insert/Input**	- Հիմնական ռեժիմ 
-* **Execute**	- Հրամանների ռեժիմ (հիմնականում ելքի համար)
+* **Command**	- Սկզբնական ռեժիմ 
+  * **i**-ով անցում դեպի Խմբագրման հիմնական ռեժիմ
+  * **ZZ**-ով ելք, պահպանելով փոփոխությունները
+  * **u** - չեղարկել վերջին խմբագրումը
 
+* **Insert/Input**	- Խմբագրման հիմնական ռեժիմ 
+  * տեքստի խմբագրում
+
+* **Execute**	- Հրամանների ռեժիմ (հիմնականում ելքի համար)
+  * **:wq**  - պահպանել փոփոխությունները և դուրս գալ  (փոխարենը օգտագործեք ZZ)
+  * **:q!**  - դուրս գալ առանց պահպանելու
+  
 <pre>
- u - undo last edit   [Command Mode]   ZZ - save and quit
-                      ↙ ↗  Esc  ↖ ↘  
-                    ↙ ↗            ↖ ↘  
-              i  ↙ ↗                 ↖ ↘  : 
-      [Insert/Input Mode]         [Execute Mode]   
-                                  :wq  - save and quit 
-                                  :q!  - quit without saving
+  ZZ - պահպանել փոփոխությունները        u - չեղարկել վերջին խմբագրումը
+       և դուրս գալ             
+                         [Command Mode]   
+                         ↙ ↗  Esc  ↖ ↘  
+                       ↙ ↗            ↖ ↘  
+                 i  ↙ ↗                 ↖ ↘  : 
+         [Insert/Input Mode]         [Execute Mode]   
+                                     :wq  - պահպանել և դուրս գալ  (փոխարենը օգտագործեք ZZ)
+                                     :q!  - դուրս գալ առանց պահպանելու
 </pre>
 
-> REMEMBER ! 
-> If you get confused in which mode you are in just **press the `ESC` key a couple of times and start over** with what you were doing.
+> > ✅ ԿԱՐԵՎՈՐ Է <br> ! 
+> Եթե շփոթվեք, թե որ ռեժիմում եք գտնվում, պարզապես **մի քանի անգամ սեղմեք `ESC`** 
+> այդպես վստահ կլինեք, որ **Command** սկզբնական ռեժիմում եք
 
-<br><br>
-
-> Execute Mode Commands
-
-* **ZZ**    - Quit saving changes if any
-
-other variants:
-* **:q**	- Quit when no changes have been made after last save
-* **:q!**	- Quit ignoring changes made
-* **:wq**	- Save current file and quit
-* **:w {file name}** - Save file with specified name
 
 <br><br>
 
