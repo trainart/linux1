@@ -1438,7 +1438,7 @@ _( `echo $?`  - ցույց է տալիս վերջին հրամանի ելքի կ
 * **nano**		Standard Linux editor - նորեկների համար - առկա է Linux-ի տարբերակների մեծ մասում
 * **vi /vim**	Standard UNIX editor - փորձառու օգտատերերի համար - առկա է UNIX/Linux տարբերակների մեծ մասում
 
-Կան նաև այլ խմբագրիչներ, օրինակ - **mcedit** or **joe**<br>
+Կան նաև այլ խմբագրիչներ, օրինակ - **mcedit** կամ **joe**<br>
 բայց դրանք հիմնականում ի սկզբանե տեղադրված չեն լինում
 
 <hr>
@@ -1460,29 +1460,31 @@ _( `echo $?`  - ցույց է տալիս վերջին հրամանի ելքի կ
 
 `vim`/`vi` շատ հզոր UNIX/Linux տեքստային խմբագրիչ է։
 
-Դրա հիմունքներն իմանալու նպատակն այն է, որ այն հիմնականում հասանելի է գրեթե ցանկացած UNIX/Linux համակարգում:
+`vi` հիմունքներն իմանալու նպատակն այն է, որ այն հիմնականում առկա է գրեթե ցանկացած UNIX/Linux համակարգում:
 
 Նույնիսկ եթե որևէ այլ խմբագրիչ առկա չէ, Vi/Vim-ը առկա կլինի, որ դրանով ֆայլեր խմբագրեք:
 
+Այսօր հիմնականում `vi` հղում է դեպի `vim`
 
-> Vim Modes
-* **Command**	- Single keystroke mostly to switch mode ( "**i**" ) or do other actions
-* **Insert/Input**	- Main mode to modify text by typing
-* **Execute**	- Execute commands within the editor
+#### PRACTICE
 
-There is also much rarely used **Visual** mode for highlight or select text for copying, deleting, etc 
+* Գտեք դեպի ուր է հղում `vi` և `vim`
 
+
+> Vim ռեժիմներ
+* **Command**	- Նախնական ռեժիմ ( "**i**"-ով անցնում ես դեպի հիմնական ռեժիմ)
+* **Insert/Input**	- Հիմնական ռեժիմ 
+* **Execute**	- Հրամանների ռեժիմ (հիմնականում ելքի համար)
 
 <pre>
-                   [Command Mode]  
-                   ↙ ↗  Esc  ↖ ↘  
-                ↙ ↗            ↖ ↘  
-           i  ↙ ↗                 ↖ ↘  : 
-   [Insert/Input Mode]         [Execute Mode]  
+ u - undo last edit   [Command Mode]   ZZ - save and quit
+                      ↙ ↗  Esc  ↖ ↘  
+                    ↙ ↗            ↖ ↘  
+              i  ↙ ↗                 ↖ ↘  : 
+      [Insert/Input Mode]         [Execute Mode]   
+                                  :wq  - save and quit 
+                                  :q!  - quit without saving
 </pre>
-
-
-<img src=https://github.com/trainart/linux1/blob/main/img/vim-modes.jpg width=70% height=70% >
 
 > REMEMBER ! 
 > If you get confused in which mode you are in just **press the `ESC` key a couple of times and start over** with what you were doing.
@@ -1491,7 +1493,7 @@ There is also much rarely used **Visual** mode for highlight or select text for 
 
 > Execute Mode Commands
 
-* **ZZ**    - Quit saving changes if any 
+* **ZZ**    - Quit saving changes if any
 
 other variants:
 * **:q**	- Quit when no changes have been made after last save
