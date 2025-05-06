@@ -1433,32 +1433,37 @@ _( `echo $?`  - ցույց է տալիս վերջին հրամանի ելքի կ
 
 <hr>
 
-## Text Editors (Խմբագիրներ)
+## Text Editors (խմբագրիչներ)
 
-* **nano**		Standard Linux editor - for newcomers - present in most LINUX versions
-* **vi /vim**	Standard UNIX editor - for experienced users - present in most UNIX/Linux versions
+* **nano**		Standard Linux editor - նորեկների համար - առկա է Linux-ի տարբերակների մեծ մասում
+* **vi /vim**	Standard UNIX editor - փորձառու օգտատերերի համար - առկա է UNIX/Linux տարբերակների մեծ մասում
 
-There are more editors, like **mcedit** or **joe**, which are mostly not installed by default.
+Կան նաև այլ խմբագրիչներ, օրինակ - **mcedit** or **joe**<br>
+բայց դրանք հիմնականում ի սկզբանե տեղադրված չեն լինում
 
 <hr>
 
 ### Nano editor basics
 
-`nano` is an easy to use text editor for UNIX/Linux operating systems. 
-It includes all the basic functionality of text editor.
-When you run `nano` main commands are displayed at the bottom. 
+`nano` հեշտ օգտագործվող տեքստային խմբագրիչ է Linux օպերացիոն համակարգերի համար:
 
-Most commands are prefixed with `^`, which means `Ctrl` key<br> 
-*  `^G` means press `Ctrl`+`g`  (NOT `G`)
+Այն ներառում է տեքստային խմբագրիչի բոլոր հիմնական գործառույթները։
+
+Հիմնական հրամանները ցուցադրվում են տակի հատվածում։
+
+Հրամանների մեծ մասը սկսվում է `^`-ով, ինչը նշանակում է `Ctrl`<br> 
+*  `^G` նշանակում է `Ctrl`+`g`  (ոչ մեծատառ `G`)
 
 <hr>
 
-### Vim/Vi basics
+### Vi (Visual Editor) / Vim (Vi IMproved)
 
-`vim`/`vi` is a very powerful editor UNIX/Linux text editor. 
-The reason to know it's basics is that it is initially available almost on any UNIX/Linux system.
-Even if any other editor will not be present or available to install Vi/Vim will be there to enable you editing text files.
-(one way to learn `vi` basics is to type `vimtutor` and follow instructions).
+`vim`/`vi` շատ հզոր UNIX/Linux տեքստային խմբագրիչ է։
+
+Դրա հիմունքներն իմանալու նպատակն այն է, որ այն հիմնականում հասանելի է գրեթե ցանկացած UNIX/Linux համակարգում:
+
+Նույնիսկ եթե որևէ այլ խմբագրիչ առկա չէ, Vi/Vim-ը առկա կլինի, որ դրանով ֆայլեր խմբագրեք:
+
 
 > Vim Modes
 * **Command**	- Single keystroke mostly to switch mode ( "**i**" ) or do other actions
@@ -1466,6 +1471,16 @@ Even if any other editor will not be present or available to install Vi/Vim will
 * **Execute**	- Execute commands within the editor
 
 There is also much rarely used **Visual** mode for highlight or select text for copying, deleting, etc 
+
+
+<pre>
+           [Command Mode]  
+              ↙ ↗   ↖ ↘  
+       i    ↙ ↗  Esc  ↖ ↘  : 
+         ↙ ↗            ↖ ↘  
+     [Insert]          [Execute]  
+</pre>
+
 
 <img src=https://github.com/trainart/linux1/blob/main/img/vim-modes.jpg width=70% height=70% >
 
