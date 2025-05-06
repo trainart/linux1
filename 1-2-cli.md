@@ -779,10 +779,19 @@ Check: `stat -c "%a %n" file2` should show "640"
 * Տեղադրում
 
 ```bash
-yum install mc
+yum -y install mc
 ```
 
-* Հիմնական Հրամաններ
+կամ
+
+```bash
+dnf -y install mc
+```
+
+> ❓ ՀԱՐՑ.
+> Դեպի ուր է հղում `dnf` և `yum`: Նույն ֆա՞յլն է
+
+* Հիմնական հրամաններ
   - **TAB** - Փոխել վահանակները (ձախ/աջ)  
   - **Esc + Enter** - Ֆայլի անունը գրել ներքևի հրամանների տողում  
   - **Esc + A** - Ֆայլի ճանապարհը գրել ներքևի հրամանների տողում
@@ -899,7 +908,7 @@ cat  /tmp/other_link_dir/link_rel
 ls -la  /tmp/other_link_dir/link_rel 
 ```
 
-> ՀԱՐՑ. Ինչո՞ւ չի գործում:
+> ❓ ՀԱՐՑ. Ինչո՞ւ չի գործում:
 
 <hr>
 
@@ -938,7 +947,7 @@ cat  /tmp/other_link_dir/link_abs
 ls -la  /tmp/other_link_dir/link*  
 ```
 
-> ՀԱՐՑ. Ինչո՞ւ է գործում:
+> ❓ ՀԱՐՑ. Ինչո՞ւ է գործում:
 
 <hr>
 
@@ -955,7 +964,7 @@ mv ~/linkdemo/origfile2 ~
 ls -la  /tmp/other_link_dir/link*  
 ```
 
-> ՀԱՐՑ. Ինչո՞ւ այլևս չի գործում:
+> ❓ ՀԱՐՑ. Ինչո՞ւ այլևս չի գործում:
 
 <hr>
 
@@ -1259,7 +1268,7 @@ cat ~/stdout
 cat ~/stderr
 ```
 
-> ՀԱՐՑ. Ի՞նչ կա **~/stdout** և **~/stderr** ֆայլերում և ինչու
+> ❓ ՀԱՐՑ. Ի՞նչ կա **~/stdout** և **~/stderr** ֆայլերում և ինչու
 
 
 ```bash
@@ -1276,7 +1285,7 @@ cat ~/stdout
 cat ~/stderr
 ```
 
-> ՀԱՐՑ. Ի՞նչ կա **~/stdout** և **~/stderr** ֆայլերում և ինչու
+> ❓ ՀԱՐՑ. Ի՞նչ կա **~/stdout** և **~/stderr** ֆայլերում և ինչու
 
 
 <br><br>
@@ -1439,7 +1448,7 @@ _( `echo $?`  - ցույց է տալիս վերջին հրամանի ելքի կ
 
 * `cd /home && pwd`
 * `cd /hh && pwd`
-  * ՀԱՐՑ. ինչպե՞ս ազատվել `cd: /hh: No such file or directory` հաղորդագրությունից
+  * ❓ ՀԱՐՑ. ինչպե՞ս ազատվել `cd: /hh: No such file or directory` հաղորդագրությունից
 * `cd /home || echo "Wrong directory"`
   * փոխեք `/home`-ը `/hh`-ով և նորից աշխատացրեք
 * ```bash
@@ -1487,7 +1496,8 @@ _( `echo $?`  - ցույց է տալիս վերջին հրամանի ելքի կ
 
 #### PRACTICE
 
-* Գտեք դեպի ուր է հղում `vi` և `vim`
+> ❓ ՀԱՐՑ.
+> Դեպի ուր է հղում `vi` և `vim`: Նույն ֆա՞յլն է
 
 #### Vim modes
 
