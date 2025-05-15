@@ -17,7 +17,6 @@ cat /etc/os-release
 cat /etc/system-release
 ```
 
-
 (RedHat/CentOS/Almalinux/Rocky versions **in addition** will have (in form of one symlink of other):
 * `/etc/redhat-release`
 * `/etc/centos-release`
