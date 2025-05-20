@@ -209,11 +209,11 @@ top
 * pidof <process_name>
 * killall [-signum] <process_name> 
 
-![img.png](../../linux1/img/signals.png)
+![img.png](img/signals.png)
 
 ### Background processes 
 
-![img.png](img.png)
+![img.png](img/img.png)
 
 
 Հրամաններից հետո `&` նշան դնելիս ուղարկում ենք ետին պլան (background) 
