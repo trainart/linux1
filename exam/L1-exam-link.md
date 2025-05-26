@@ -2,5 +2,4 @@
 
 ## EXAM LINK
 
-https://docs.google.com/forms/d/e/1FAIpQLSe2Aac-31cM7i-7p1WUsN6J-oWklil-9wTWvMDasNvzeIOUUA/viewform
-
+https://forms.gle/zzHMhp4ddMXSX5D2A
