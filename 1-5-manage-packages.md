@@ -1,4 +1,4 @@
-# Linux Administration and Networking Basics (level 2) Linux-ի կառավարում և ցանցային հիմունքներ (փուլ 2)
+# Linux Essentials (level 1) <br> Լինուքսի Հիմունքներ (փուլ 1)
 
 ## Managing Software packages
 
