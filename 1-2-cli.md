@@ -1742,4 +1742,24 @@ sudo chgrp root file_for_rootgrp
 > որ կարիք լինի փոխել միայն խումբը։ 
 > Հիմնակաում պետք է լինում փոխել և տիրոջը և խումբը միասին, ինչն էլ անում է `chown`-ը 
 
+## loginctl - Control the systemd login manager
+
+Like `w` or `who`, but more powerful
+```bash
+loginctl
+```
+
+```bash
+loginctl user-status student
+```
+
+```bash
+loginctl show-session  <num>
+``` 
+
+```bash
+loginctl terminate-session <num>
+```
+
+
 
