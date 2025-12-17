@@ -84,6 +84,11 @@ du -sh /var/*
 
 `df -hT -x tmpfs -x devtmpfs` ցույց չտալ `tmpfs` և `devtmpfs` ֆայլային համակարգերը
 
+
+```bash
+df -hT /
+```
+
 ## File Search - Ֆայլերի որոնում
 
 **find** - որոնում Ֆայլերի տարբեր հատկանիշներով
