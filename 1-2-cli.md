@@ -701,6 +701,30 @@ ls -la ~/.bash*
 * `mkdir <newdir>`		 Ստեղծել դիրեկտորիա 
 * `alias <alias> <command>` Ստեղծել հրամանի կրճատում 
 
+```bash
+whatis mv ; whatis cp; whatis rm; whatis mkdir ; whatis alias
+```
+
+Ինչո՞ւ վերջում ստացանք `alias: nothing appropriate`
+
+Ստուգենք, թե **ինչ տեսակի** հրամաններ են
+
+```bash
+type mv ; type cp; type rm; type mkdir ; type alias
+```
+
+`alias`- այլ տեսակի հրաման է - `Shell builtin`
+
+`Shell builtin` հրամանների համար կարող ենք օգտվել այլ օգնության տարբերակից `help`
+
+```bash
+help alias
+```
+
+```bash
+help cd
+```
+
 > Հրամանների օրինակներ
 
 ```bash 
